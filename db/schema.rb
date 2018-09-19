@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_18_233459) do
+ActiveRecord::Schema.define(version: 2018_09_19_014047) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,21 @@ ActiveRecord::Schema.define(version: 2018_09_18_233459) do
     t.string "height"
     t.string "ethnicity"
     t.string "vocal_range"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "audition_journals", force: :cascade do |t|
+    t.integer "actor_id"
+    t.string "feeling"
+    t.string "could_do_better"
+    t.string "did_well"
+    t.string "did_amazing"
+    t.string "miscellaneous"
+    t.string "song_one"
+    t.string "song_two"
+    t.string "monologue_one"
+    t.string "monologue_two"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -55,6 +70,15 @@ ActiveRecord::Schema.define(version: 2018_09_18_233459) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "resources", force: :cascade do |t|
+    t.integer "actor_id"
+    t.string "name"
+    t.string "link"
+    t.string "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "resumes", force: :cascade do |t|
     t.integer "actor_id"
     t.string "first_name"
@@ -72,8 +96,12 @@ ActiveRecord::Schema.define(version: 2018_09_18_233459) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "seasons", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "shows", force: :cascade do |t|
-    t.integer "season_id"
     t.integer "actor_id"
     t.string "show_name"
     t.text "show_description"

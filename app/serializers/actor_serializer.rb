@@ -1,5 +1,5 @@
 class ActorSerializer
   include FastJsonapi::ObjectSerializer
   set_type :actor
-  attributes :first_name, :last_name, :password, :email, :birthday, :phone_number, :equity, :gender, :city, :height, :ethnicity, :vocal_range, :tryouts, :auditions, :resume
+  attributes :first_name, :last_name, :password, :email, :birthday, :phone_number, :equity, :gender, :city, :height, :ethnicity, :vocal_range, :tryouts, :auditions, :resume, :audition_journals, :shows, :resources
 end

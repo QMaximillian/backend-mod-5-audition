@@ -5,6 +5,7 @@ class Api::V1::ActorsController < ApplicationController
   def index
     @actors = Actor.all
 
+
     render json: ActorSerializer.new(@actors).serialized_json, status: :ok
   end
 

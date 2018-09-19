@@ -5,7 +5,7 @@ class Api::V1::PerformancesController < ApplicationController
   def index
     @performances = Performance.all
 
-    render json: PerformanceSerializer.new(@performance).serialized_json,  status: :ok
+    render json: PerformanceSerializer.new(@performances).serialized_json,  status: :ok
   end
 
   # GET /performances/1

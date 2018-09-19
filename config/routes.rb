@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  resources :show_actors
+
+
+  resources :seasons
+
   namespace :api do
     namespace :v1 do
       resources :resumes
@@ -8,6 +11,8 @@ Rails.application.routes.draw do
       resources :actors
       resources :shows
       resources :performances
+      resources :audition_journals
+      resources :resources
     end
   end
 
