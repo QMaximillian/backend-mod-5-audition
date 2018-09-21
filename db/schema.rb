@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 2018_09_19_014047) do
     t.string "height"
     t.string "ethnicity"
     t.string "vocal_range"
+    t.boolean "default_resume"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -52,11 +53,6 @@ ActiveRecord::Schema.define(version: 2018_09_19_014047) do
     t.string "show_name"
     t.datetime "audition_time"
     t.text "audition_information"
-    t.text "feedback"
-    t.string "monologue_one"
-    t.string "monologue_two"
-    t.string "song_one"
-    t.string "song_two"
     t.string "location"
     t.boolean "cast"
     t.datetime "created_at", null: false
@@ -81,6 +77,7 @@ ActiveRecord::Schema.define(version: 2018_09_19_014047) do
 
   create_table "resumes", force: :cascade do |t|
     t.integer "actor_id"
+    t.integer "audition_id"
     t.string "first_name"
     t.string "last_name"
     t.string "email"
@@ -92,6 +89,7 @@ ActiveRecord::Schema.define(version: 2018_09_19_014047) do
     t.string "height"
     t.string "ethnicity"
     t.string "vocal_range"
+    t.boolean "default_resume"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

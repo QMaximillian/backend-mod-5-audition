@@ -2,6 +2,7 @@ class CreateResumes < ActiveRecord::Migration[5.2]
   def change
     create_table :resumes do |t|
       t.integer :actor_id
+      t.integer :audition_id
       t.string :first_name
       t.string :last_name
       t.string :email
@@ -13,6 +14,7 @@ class CreateResumes < ActiveRecord::Migration[5.2]
       t.string :height
       t.string :ethnicity
       t.string :vocal_range
+      t.boolean :default_resume
       t.timestamps
     end
   end
