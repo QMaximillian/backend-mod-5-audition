@@ -48,9 +48,9 @@ Actor.create(first_name: "Quinn", last_name: "Lashinsky", password: "1", email: 
 
 Show.create(actor_id: 1, show_name: "Urinetown", show_description: "People can't pee for free, they revolt", location: "NYC", role: "Tiny Tom")
 
-# Show.create(actor_id: 1, show_name: "Drowsy Chaperone", show_description: " It is a parody of American musical comedy of the 1920s", location: "NYC", role: "Adolpho")
+Show.create(actor_id: 1, show_name: "Drowsy Chaperone", show_description: " It is a parody of American musical comedy of the 1920s", location: "NYC", role: "Adolpho")
 #
-# Show.create(actor_id: 1, show_name: "Wicked", show_description: "The musical is told from the perspective of the witches of the Land of Oz; its plot begins before and continues after Dorothy Gale's arrival in Oz from Kansas", location: "NYC", role: "Boq")
+Show.create(actor_id: 1, show_name: "Wicked", show_description: "The musical is told from the perspective of the witches of the Land of Oz; its plot begins before and continues after Dorothy Gale's arrival in Oz from Kansas", location: "NYC", role: "Boq")
 #
 # Show.create(actor_id: 1, show_name: "John & Jen", show_description: "It is a two-person show about the relationships first between a brother and sister, John and Jen, and then, after John is killed, between Jen and her son, also named John", location: "NYC", role: "John")
 #
@@ -77,10 +77,10 @@ Show.create(actor_id: 1, show_name: "Urinetown", show_description: "People can't
 # //AUDITIONS
 
 
-Audition.create(show_id: 1, show_name: "Urinetown", audition_time: "Sat, 7 Jul 2018 04:00:00 -0400", audition_information: "Please bring 2 songs, and 2 monologues", location: "NYC", cast: true)
+Audition.create(show_id: 1, show_name: "Urinetown", audition_time: "Sat, 7 Jul 2018 04:00:00 -0400", audition_information: "Please bring 2 songs, and 2 monologues", location: "NYC", cast: false)
 #
 #
-# Audition.create(show_id: 2, show_name: "Drowsy Chaperone", audition_time: "Fri, 13 Jul 2018 08:30:00 -0400", audition_information: "Please bring 2 songs, and 2 monologues", location: "NYC", cast: true)
+Audition.create(show_id: 2, show_name: "Drowsy Chaperone", audition_time: "Fri, 13 Jul 2018 08:30:00 -0400", audition_information: "Please bring 2 songs, and 2 monologues", location: "NYC", cast: false)
 #
 # Audition.create(show_id: 3, show_name: "Wicked", audition_time: "Wed, 11 Jul 2018 09:30:00 -0400", audition_information: "Please bring 2 songs, and 2 monologues", location: "NYC", cast: true)
 
@@ -106,9 +106,9 @@ Audition.create(show_id: 1, show_name: "Urinetown", audition_time: "Sat, 7 Jul 2
 # Performance.create(show_id: 1, performance_datetime: "Thu, 22 Nov 2018 02:00:00 +0000")
 #
 #
-Resume.create(actor_id:	1, audition_id: 1, first_name: "Quinn",	last_name: "Lashinsky", email: "example@example.com", birthday: "Fri, 12 Dec 1980", phone_number: "5555555555", equity: true, gender: "Male", city: "NYC", height: "6\'0\"", ethnicity: "Ambiguous", vocal_range: "Tenor" default_resume: true)
+Resume.create(actor_id:	1, audition_id: 1, shows: [], shows: [], training: [], skills: [], default_resume: true)
 #
-# Resume.create(actor_id:	1, audition_id: 2, first_name: "JK",	last_name: "LMNOP", email: "example@example.com", birthday: "Fri, 12 Dec 1980", phone_number: "5555555555", equity: true, gender: "Male", city: "NYC", height: "6\'0\"", ethnicity: "Ambiguous", vocal_range: "Tenor" default_resume: false)
+Resume.create(actor_id:	1, audition_id: 2, shows: [], training: [], skills: [], default_resume: false)
 #
 Tryout.create(actor_id: 1, audition_id: 1, city: "NYC", starred: false, callback: false, cast: false)
 # Tryout.create(actor_id: 1, audition_id: 2, city: "NYC", starred: true, callback: true, cast: false)
@@ -121,6 +121,6 @@ Tryout.create(actor_id: 1, audition_id: 1, city: "NYC", starred: false, callback
 # Tryout.create(actor_id: 1, audition_id: 9, city: "NYC", starred: false, callback: false, cast: false)
 # Tryout.create(actor_id: 1, audition_id: 10, city: "NYC", starred: false, callback: false, cast: false)
 
-# AuditionJournal.create(actor_id: 1, feeling: "good", could_do_better: "dancing", did_well: "singing", did_amazing: "monologues",	miscellaneous: "N/A", song_one: "Giants in the Sky", song_two: "Anything Goes", monologue_one: "MONO 1", monologue_two: "MONO 2")
+AuditionJournal.create(actor_id: 1, tryout_id: 1, feeling: "good", could_do_better: "dancing", did_well: "singing", did_amazing: "monologues",	miscellaneous: "N/A", song_one: "Giants in the Sky", song_two: "Anything Goes", monologue_one: "MONO 1", monologue_two: "MONO 2")
 #
 # Resource.create(actor_id: 1, name: "Cool Website", link: "www.coolwebsite.com", description: "The coolest website")

@@ -28,13 +28,13 @@ ActiveRecord::Schema.define(version: 2018_09_19_014047) do
     t.string "height"
     t.string "ethnicity"
     t.string "vocal_range"
-    t.boolean "default_resume"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "audition_journals", force: :cascade do |t|
     t.integer "actor_id"
+    t.integer "tryout_id"
     t.string "feeling"
     t.string "could_do_better"
     t.string "did_well"
@@ -78,17 +78,9 @@ ActiveRecord::Schema.define(version: 2018_09_19_014047) do
   create_table "resumes", force: :cascade do |t|
     t.integer "actor_id"
     t.integer "audition_id"
-    t.string "first_name"
-    t.string "last_name"
-    t.string "email"
-    t.date "birthday"
-    t.string "phone_number"
-    t.boolean "equity"
-    t.string "gender"
-    t.string "city"
-    t.string "height"
-    t.string "ethnicity"
-    t.string "vocal_range"
+    t.string "shows", array: true
+    t.string "training", array: true
+    t.string "skills", array: true
     t.boolean "default_resume"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

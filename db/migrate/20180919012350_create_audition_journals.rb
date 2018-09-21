@@ -2,6 +2,7 @@ class CreateAuditionJournals < ActiveRecord::Migration[5.2]
   def change
     create_table :audition_journals do |t|
           t.integer :actor_id
+          t.integer :tryout_id
           t.string :feeling
           t.string :could_do_better
           t.string :did_well
