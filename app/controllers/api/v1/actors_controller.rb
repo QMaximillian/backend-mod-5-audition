@@ -6,7 +6,7 @@ class Api::V1::ActorsController < ApplicationController
     @actors = Actor.all
 
 
-    render json: ActorSerializer.new(@actors).serialized_json, status: :ok
+    render json: ActorSerializer.new(@actors).to_json, status: :ok
   end
 
   # GET /actors/1
@@ -14,7 +14,7 @@ class Api::V1::ActorsController < ApplicationController
 
     @actor = Actor.find(params[:id])
 
-    render json: ActorSerializer.new(@actor).serialized_json, status: :ok
+    render json: ActorSerializer.new(@actor).to_json, status: :ok
   end
   #
   # # POST /actors
@@ -23,7 +23,7 @@ class Api::V1::ActorsController < ApplicationController
     @actor = Actor.new(actor_params)
 
     if @actor.save
-      render json: ActorSerializer.new(@actor).serialized_json, status: :ok, status: :created
+      render json: ActorSerializer.new(@actor).to_json, status: :ok, status: :created
     # else
     #   render json: @actor.errors, status: :unprocessable_entity
     end
@@ -32,7 +32,7 @@ class Api::V1::ActorsController < ApplicationController
   # # PATCH/PUT /actors/1
   def update
     if @actor.update(actor_params)
-      render json: ActorSerializer.new(@actor).serialized_json, status: :ok
+      render json: ActorSerializer.new(@actor).to_json, status: :ok
     else
       render json: @actor.errors, status: :unprocessable_entity
     end

@@ -5,14 +5,14 @@ class Api::V1::ResumesController < ApplicationController
   def index
     @resumes = Resume.all
 
-    render json: ResumeSerializer.new(@resumes).serialized_json,  status: :ok
+    render json: ResumeSerializer.new(@resumes).to_json,  status: :ok
   end
 
   # GET /resumes/1
   def show
     @resume = Resume.find(params[:id])
 
-    render json: ResumeSerializer.new(@resume).serialized_json,  status: :ok
+    render json: ResumeSerializer.new(@resume).to_json,  status: :ok
   end
 
   # POST /resumes
@@ -20,7 +20,7 @@ class Api::V1::ResumesController < ApplicationController
     @resume = Resume.new(resume_params)
 
     if @resume.save
-      render json: ResumeSerializer.new(@resume).serialized_json, status: :created
+      render json: ResumeSerializer.new(@resume).to_json, status: :created
     else
       render json: @resume.errors, status: :unprocessable_entity
     end
@@ -29,7 +29,7 @@ class Api::V1::ResumesController < ApplicationController
   # PATCH/PUT /resumes/1
   def update
     if @resume.update(resume_params)
-      render json: ResumeSerializer.new(@resume).serialized_json,  status: :ok
+      render json: ResumeSerializer.new(@resume).to_json,  status: :ok
     else
       render json: @resume.errors, status: :unprocessable_entity
     end

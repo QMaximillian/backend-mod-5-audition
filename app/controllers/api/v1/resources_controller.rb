@@ -5,14 +5,14 @@ class Api::V1::ResourcesController < ApplicationController
   def index
     @resources = Resource.all
 
-    render json: ResourceSerializer.new(@resources).serialized_json,  status: :ok
+    render json: ResourceSerializer.new(@resources).to_json,  status: :ok
   end
 
   # GET /resources/1
   def show
     @resource = Resource.find(params[:id])
 
-    render json: ResourceSerializer.new(@resource).serialized_json,  status: :ok
+    render json: ResourceSerializer.new(@resource).to_json,  status: :ok
   end
 
   # POST /resources
@@ -20,7 +20,7 @@ class Api::V1::ResourcesController < ApplicationController
     @resource = Resource.new(resource_params)
 
     if @resource.save
-      render json: ResourceSerializer.new(@resource).serialized_json, status: :created
+      render json: ResourceSerializer.new(@resource).to_json, status: :created
     else
       render json: @resource.errors, status: :unprocessable_entity
     end
@@ -29,7 +29,7 @@ class Api::V1::ResourcesController < ApplicationController
   # PATCH/PUT /resources/1
   def update
     if @resource.update(resource_params)
-      render json: ResourceSerializer.new(@resource).serialized_json,  status: :ok
+      render json: ResourceSerializer.new(@resource).to_json,  status: :ok
     else
       render json: @resource.errors, status: :unprocessable_entity
     end

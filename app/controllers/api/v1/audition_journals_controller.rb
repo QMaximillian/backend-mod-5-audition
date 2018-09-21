@@ -5,14 +5,14 @@ class Api::V1::AuditionJournalsController < ApplicationController
   def index
     @audition_journals = AuditionJournal.all
 
-    render json: AuditionJournalSerializer.new(@audition_journals).serialized_json, status: :ok
+    render json: AuditionJournalSerializer.new(@audition_journals).to_json, status: :ok
   end
 
   # GET /audition_journals/1
   def show
     @audition_journal = AuditionJournal.find(params[:id])
 
-    render json: AuditionJournalSerializer.new(@audition_journal).serialized_json, status: :ok
+    render json: AuditionJournalSerializer.new(@audition_journal).to_json, status: :ok
   end
 
   # POST /audition_journals
@@ -20,7 +20,7 @@ class Api::V1::AuditionJournalsController < ApplicationController
     @audition_journal = AuditionJournal.new(audition_journal_params)
 
     if @audition_journal.save
-      render json: AuditionJournalSerializer.new(@audition_journal).serialized_json, status: :created
+      render json: AuditionJournalSerializer.new(@audition_journal).to_json, status: :created
     else
       render json: @audition_journal.errors, status: :unprocessable_entity
     end
@@ -29,7 +29,7 @@ class Api::V1::AuditionJournalsController < ApplicationController
   # PATCH/PUT /audition_journals/1
   def update
     if @audition_journal.update(audition_journal_params)
-      render json: AuditionJournalSerializer.new(@audition_journal).serialized_json, status: :ok
+      render json: AuditionJournalSerializer.new(@audition_journal).to_json, status: :ok
     else
       render json: @audition_journal.errors, status: :unprocessable_entity
     end

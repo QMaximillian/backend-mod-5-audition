@@ -5,14 +5,14 @@ class Api::V1::PerformancesController < ApplicationController
   def index
     @performances = Performance.all
 
-    render json: PerformanceSerializer.new(@performances).serialized_json,  status: :ok
+    render json: PerformanceSerializer.new(@performances).to_json,  status: :ok
   end
 
   # GET /performances/1
   def show
     @performance = Performance.find(param[:id])
 
-    render json: PerformanceSerializer.new(@performance).serialized_json, status: :ok
+    render json: PerformanceSerializer.new(@performance).to_json, status: :ok
   end
 
   # POST /performances
@@ -20,7 +20,7 @@ class Api::V1::PerformancesController < ApplicationController
     @performance = Performance.new(performance_params)
 
     if @performance.save
-      render json: PerformanceSerializer.new(@performance).serialized_json, status: :created
+      render json: PerformanceSerializer.new(@performance).to_json, status: :created
     else
       render json: @performance.errors, status: :unprocessable_entity
     end
@@ -29,7 +29,7 @@ class Api::V1::PerformancesController < ApplicationController
   # PATCH/PUT /performances/1
   def update
     if @performance.update(performance_params)
-      render json: PerformanceSerializer.new(@performance).serialized_json, status: :ok
+      render json: PerformanceSerializer.new(@performance).to_json, status: :ok
     else
       render json: @performance.errors, status: :unprocessable_entity
     end
