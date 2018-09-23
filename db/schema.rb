@@ -33,7 +33,6 @@ ActiveRecord::Schema.define(version: 2018_09_19_014047) do
   end
 
   create_table "audition_journals", force: :cascade do |t|
-    t.integer "actor_id"
     t.integer "tryout_id"
     t.string "feeling"
     t.string "could_do_better"
@@ -44,6 +43,7 @@ ActiveRecord::Schema.define(version: 2018_09_19_014047) do
     t.string "song_two"
     t.string "monologue_one"
     t.string "monologue_two"
+    t.text "journal"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -36,6 +36,7 @@ class Api::V1::ActorsController < ApplicationController
     else
       render json: @actor.errors, status: :unprocessable_entity
     end
+    byebug
   end
   #
   # # DELETE /actors/1
