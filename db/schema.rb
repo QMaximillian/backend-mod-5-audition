@@ -35,14 +35,6 @@ ActiveRecord::Schema.define(version: 2018_09_19_014047) do
   create_table "audition_journals", force: :cascade do |t|
     t.integer "tryout_id"
     t.string "feeling"
-    t.string "could_do_better"
-    t.string "did_well"
-    t.string "did_amazing"
-    t.string "miscellaneous"
-    t.string "song_one"
-    t.string "song_two"
-    t.string "monologue_one"
-    t.string "monologue_two"
     t.text "journal"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
