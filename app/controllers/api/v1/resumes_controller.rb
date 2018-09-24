@@ -48,6 +48,6 @@ class Api::V1::ResumesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def resume_params
-      params.require(:resume).permit(:actor_id, :first_name, :last_name, :email, :birthday, :phone_number, :equity, :gender, :city, :height, :ethnicity, :vocal_range)
+      params.require(:resume).permit(:actor_id, :audition_id, :shows, :training, :skills, :default_resume)
     end
 end
