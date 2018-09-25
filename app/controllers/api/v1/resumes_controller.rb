@@ -17,8 +17,9 @@ class Api::V1::ResumesController < ApplicationController
 
   # POST /resumes
   def create
-    @resume = Resume.new(resume_params)
 
+    @resume = Resume.new(resume_params)
+    # byebug
     if @resume.save
       render json: ResumeSerializer.new(@resume).to_json, status: :created
     else
@@ -48,6 +49,6 @@ class Api::V1::ResumesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def resume_params
-      params.require(:resume).permit(:actor_id, :audition_id, :shows, :training, :skills, :default_resume)
+      params.require(:resume).permit(:actor_id, :audition_id, :shows, :training, :skills, :characters, :default_resume)
     end
 end

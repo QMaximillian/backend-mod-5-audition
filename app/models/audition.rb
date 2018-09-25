@@ -6,7 +6,7 @@ class Audition < ApplicationRecord
   has_many :actor_tryouts, through: :tryouts, source: :actor, foreign_key: :actor_id, inverse_of: :tryout_auditions
 
 
-  # has_many :actors, through: :tryouts
 
-  # has_many :actors, through: :resumes
+
+
 end

@@ -77,14 +77,14 @@ Show.create(actor_id: 1, show_name: "Wicked", show_description: "The musical is 
 # //AUDITIONS
 
 
-Audition.create(show_id: 1, show_name: "Urinetown", audition_time: "Sat, 7 Jul 2018 04:00:00 -0400", audition_information: "Please bring 2 songs, and 2 monologues", location: "NYC", cast: false)
+Audition.create(show_id: 1, show_name: "Urinetown", audition_date: "Sat, 7 Jul 2018", audition_information: "Please bring 2 songs, and 2 monologues", location: "NYC", cast: false, begin_audition: "Sat, 7 Jul 2018 10:00:00 -000", end_audition: "Sat, 7 Jul 2018 15:00:00 -000", time_slots: "Sat, 7 Jul 2018 00:15:00 -000")
 #
 #
-Audition.create(show_id: 2, show_name: "Drowsy Chaperone", audition_time: "Fri, 13 Jul 2018 08:30:00 -0400", audition_information: "Please bring 2 songs, and 2 monologues", location: "NYC", cast: false)
+Audition.create(show_id: 2, show_name: "Drowsy Chaperone", audition_date: "Fri, 13 Jul 2018", audition_information: "Please bring 2 songs, and 2 monologues", location: "NYC", cast: false, begin_audition: "Fri, 13 Jul 2018 11:00:00 -0000", end_audition: "Fri, 13 Jul 2018 16:00:00 -0000", time_slots: "Fri, 13 Jul 2018 00:15:00 -0000")
 #
-Audition.create(show_id: 3, show_name: "Wicked", audition_time: "Wed, 11 Jul 2018 09:30:00 -0400", audition_information: "Please bring 2 songs, and 2 monologues", location: "NYC", cast: true)
+Audition.create(show_id: 3, show_name: "Wicked", audition_date: "Wed, 11 Jul 2018", audition_information: "Please bring 2 songs, and 2 monologues", location: "NYC", cast: true, begin_audition: "Wed, 11 Jul 2018 10:00:00 -0000", end_audition: "Wed, 11 Jul 2018 15:00:00 -0000", time_slots: "Wed, 11 Jul 2018 00:15:00 -0000")
 
-# Audition.create(show_id: 4, show_name: "Jon & Jen", audition_time: "Sun, 8 Jul 2018 09:30:00 -0400", audition_information: "Please bring 2 songs, and 2 monologues", location: "NYC", cast: true)
+# Audition.create(show_id: 4, show_name: "Jon & Jen", audition_time: "Sun, 8 Jul 2018 09:30:00 -0000", audition_information: "Please bring 2 songs, and 2 monologues", location: "NYC", cast: true)
 #
 # Audition.create(show_id: 5, show_name: "Rent", audition_time: "Mon, 23 Jul 2018 02:30:00 +0000", audition_information: "Please bring 2 songs, and 2 monologues", location: "NYC", cast: true)
 #
@@ -98,7 +98,7 @@ Audition.create(show_id: 3, show_name: "Wicked", audition_time: "Wed, 11 Jul 201
 #
 # Audition.create(show_id: 10, show_name: "A Raisin in the Sun", audition_time: "Thu, 4 Oct 2018 11:00:00 +0000", audition_information: "Please bring 2 songs, and 2 monologues", location: "NYC", cast: true)
 #
-# Audition.create(show_id: 11, show_name: "Follies", audition_time: "Fri, 6 Jul 2018 02:00:00 -0400", audition_information: "Please bring 2 songs, and 2 monologues", location: "NYC", cast: true)
+# Audition.create(show_id: 11, show_name: "Follies", audition_time: "Fri, 6 Jul 2018 02:00:00 -0000", audition_information: "Please bring 2 songs, and 2 monologues", location: "NYC", cast: true)
 
 # // END
 
@@ -106,13 +106,13 @@ Audition.create(show_id: 3, show_name: "Wicked", audition_time: "Wed, 11 Jul 201
 # Performance.create(show_id: 1, performance_datetime: "Thu, 22 Nov 2018 02:00:00 +0000")
 #
 #
-Resume.create(actor_id:	1, audition_id: 1, shows: [{c: 'c', d: 'd'}], training: [{c: 'c', d: 'd'}], skills: [{c: 'c', d: 'd'}], default_resume: true)
+Resume.create(actor_id:	1, audition_id: 1, shows: 'Carousel, Showboat', characters: 'AAA, BBB', training: 'Temple University', skills: 'Juggling', default_resume: true)
 #
-Resume.create(actor_id:	1, audition_id: 2, shows: [{a: 'a', b: 'b'}], training: [{a: 'a', b: 'b'}], skills: [{a: 'a', b: 'b'}], default_resume: false)
+Resume.create(actor_id:	1, audition_id: 2, shows: '', characters: '', training: '', skills: '', default_resume: false)
 #
-Tryout.create(actor_id: 1, audition_id: 1, city: "NYC", starred: true, callback: false, cast: false)
-Tryout.create(actor_id: 1, audition_id: 2, city: "NYC", starred: false, callback: false, cast: true)
-Tryout.create(actor_id: 1, audition_id: 3, city: "NYC", starred: false, callback: true, cast: false)
+Tryout.create(actor_id: 1, audition_id: 1, city: "NYC", audition_time: "011:00:00 +0000" ,starred: true, callback: false, cast: false)
+Tryout.create(actor_id: 1, audition_id: 2, city: "NYC", audition_time: "012:00:00 +0000", starred: false, callback: false, cast: true)
+Tryout.create(actor_id: 1, audition_id: 3, city: "NYC", audition_time: "011:30:00 +0000", starred: false, callback: true, cast: false)
 # Tryout.create(actor_id: 1, audition_id: 2, city: "NYC", starred: true, callback: true, cast: false)
 # Tryout.create(actor_id: 1, audition_id: 3, city: "NYC", starred: false, callback: true, cast: false)
 # Tryout.create(actor_id: 1, audition_id: 4, city: "NYC", starred: false, callback: false, cast: false)

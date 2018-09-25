@@ -31,12 +31,12 @@ class Api::V1::ActorsController < ApplicationController
   #
   # # PATCH/PUT /actors/1
   def update
-    if @actor.update(actor_params)
+    set_actor
+    if @actor && @actor.update(actor_params)
       render json: ActorSerializer.new(@actor).to_json, status: :ok
     else
       render json: @actor.errors, status: :unprocessable_entity
     end
-    byebug
   end
   #
   # # DELETE /actors/1
@@ -47,9 +47,9 @@ class Api::V1::ActorsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
 
-    # def set_actor
-    #   @actor = Actor.find(params[:id])
-    # end
+    def set_actor
+      @actor = Actor.find(params[:id])
+    end
 
     # Only allow a trusted parameter "white list" through.
     def actor_params

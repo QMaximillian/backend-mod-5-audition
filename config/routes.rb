@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
 
+  resources :audition_times
   resources :seasons
 
   namespace :api do

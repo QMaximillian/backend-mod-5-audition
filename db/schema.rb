@@ -43,10 +43,13 @@ ActiveRecord::Schema.define(version: 2018_09_19_014047) do
   create_table "auditions", force: :cascade do |t|
     t.integer "show_id"
     t.string "show_name"
-    t.datetime "audition_time"
+    t.datetime "audition_date"
     t.text "audition_information"
     t.string "location"
     t.boolean "cast"
+    t.datetime "begin_audition"
+    t.datetime "end_audition"
+    t.datetime "time_slots"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -70,9 +73,10 @@ ActiveRecord::Schema.define(version: 2018_09_19_014047) do
   create_table "resumes", force: :cascade do |t|
     t.integer "actor_id"
     t.integer "audition_id"
-    t.string "shows", array: true
-    t.string "training", array: true
-    t.string "skills", array: true
+    t.string "shows"
+    t.string "training"
+    t.string "skills"
+    t.string "characters"
     t.boolean "default_resume"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -96,6 +100,7 @@ ActiveRecord::Schema.define(version: 2018_09_19_014047) do
   create_table "tryouts", force: :cascade do |t|
     t.integer "actor_id"
     t.integer "audition_id"
+    t.string "audition_time"
     t.string "city"
     t.boolean "starred"
     t.boolean "callback"
