@@ -9,7 +9,7 @@ class CreateAuditions < ActiveRecord::Migration[5.2]
           t.boolean :cast
           t.datetime :begin_audition
           t.datetime :end_audition
-          t.datetime :time_slots
+          t.integer :time_slots
       t.timestamps
     end
   end

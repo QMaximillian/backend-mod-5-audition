@@ -49,7 +49,7 @@ ActiveRecord::Schema.define(version: 2018_09_19_014047) do
     t.boolean "cast"
     t.datetime "begin_audition"
     t.datetime "end_audition"
-    t.datetime "time_slots"
+    t.integer "time_slots"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -19,7 +19,7 @@ class Api::V1::ResumesController < ApplicationController
   def create
 
     @resume = Resume.new(resume_params)
-    # byebug
+
     if @resume.save
       render json: ResumeSerializer.new(@resume).to_json, status: :created
     else

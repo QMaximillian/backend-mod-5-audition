@@ -77,12 +77,12 @@ Show.create(actor_id: 1, show_name: "Wicked", show_description: "The musical is 
 # //AUDITIONS
 
 
-Audition.create(show_id: 1, show_name: "Urinetown", audition_date: "Sat, 7 Jul 2018", audition_information: "Please bring 2 songs, and 2 monologues", location: "NYC", cast: false, begin_audition: "Sat, 7 Jul 2018 10:00:00 -000", end_audition: "Sat, 7 Jul 2018 15:00:00 -000", time_slots: "Sat, 7 Jul 2018 00:15:00 -000")
+Audition.create(show_id: 1, show_name: "Urinetown", audition_date: "Sat, 7 Jul 2018", audition_information: "Please bring 2 songs, and 2 monologues", location: "NYC", cast: false, begin_audition: "Sat, 7 Jul 2018 10:00:00 -000", end_audition: "Sat, 7 Jul 2018 15:00:00 -000", time_slots: 15)
 #
 #
-Audition.create(show_id: 2, show_name: "Drowsy Chaperone", audition_date: "Fri, 13 Jul 2018", audition_information: "Please bring 2 songs, and 2 monologues", location: "NYC", cast: false, begin_audition: "Fri, 13 Jul 2018 11:00:00 -0000", end_audition: "Fri, 13 Jul 2018 16:00:00 -0000", time_slots: "Fri, 13 Jul 2018 00:15:00 -0000")
+Audition.create(show_id: 2, show_name: "Drowsy Chaperone", audition_date: "Fri, 13 Jul 2018", audition_information: "Please bring 2 songs, and 2 monologues", location: "NYC", cast: false, begin_audition: "Fri, 13 Jul 2018 11:00:00 -0000", end_audition: "Fri, 13 Jul 2018 16:00:00 -0000", time_slots: 15)
 #
-Audition.create(show_id: 3, show_name: "Wicked", audition_date: "Wed, 11 Jul 2018", audition_information: "Please bring 2 songs, and 2 monologues", location: "NYC", cast: true, begin_audition: "Wed, 11 Jul 2018 10:00:00 -0000", end_audition: "Wed, 11 Jul 2018 15:00:00 -0000", time_slots: "Wed, 11 Jul 2018 00:15:00 -0000")
+Audition.create(show_id: 3, show_name: "Wicked", audition_date: "Wed, 11 Jul 2018", audition_information: "Please bring 2 songs, and 2 monologues", location: "NYC", cast: true, begin_audition: "Wed, 11 Jul 2018 10:00:00 -0000", end_audition: "Wed, 11 Jul 2018 15:00:00 -0000", time_slots: 15)
 
 # Audition.create(show_id: 4, show_name: "Jon & Jen", audition_time: "Sun, 8 Jul 2018 09:30:00 -0000", audition_information: "Please bring 2 songs, and 2 monologues", location: "NYC", cast: true)
 #
