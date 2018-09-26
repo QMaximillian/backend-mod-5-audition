@@ -10,7 +10,7 @@
 
 Actor.create(first_name: "Quinn", last_name: "Lashinsky", password: "1", email: "example@example.com", birthday: "Fri, 12 Dec 1980", phone_number: "1111111111", equity: true, gender: "Male", city: "NYC", height: "72", ethnicity: "Ambiguous", vocal_range: "Tenor")
 
-# Actor.create(first_name: "John", last_name: "Jones", password: "2", email: "john_jones@example.com", birthday: "Sun, 10 Mar 1940", phone_number: "2222222222", equity: false, gender: "Male", city: "NYC", height: "65", ethnicity: "Caucasian", vocal_range: "Baritone")
+Actor.create(first_name: "John", last_name: "Jones", password: "2", email: "john_jones@example.com", birthday: "Sun, 10 Mar 1940", phone_number: "2222222222", equity: false, gender: "Male", city: "NYC", height: "65", ethnicity: "Caucasian", vocal_range: "Baritone")
 #
 # Actor.create(first_name: "Lisa", last_name: "Samuels", password: "3", email: "lisa-samuels@example.com", birthday: "Sun, 6 Oct 1957", phone_number: "3333333333", equity: true, gender: "Female", city: "NYC", height: "55", ethnicity: "Irish", vocal_range: "Soprano")
 #

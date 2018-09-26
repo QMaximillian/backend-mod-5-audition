@@ -1,4 +1,6 @@
 class Actor < ApplicationRecord
+
+  has_secure_password
   # has_many :audition_journals
   has_many :resumes
   has_many :tryouts

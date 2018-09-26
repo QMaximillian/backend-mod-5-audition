@@ -16,7 +16,7 @@ class Api::V1::TryoutsController < ApplicationController
   # POST /tryouts
   def create
     @tryout = Tryout.new(tryout_params)
-    
+
     if @tryout.save
       render json: TryoutSerializer.new(@tryout).to_json, status: :ok, status: :created
     else

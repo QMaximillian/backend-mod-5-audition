@@ -14,6 +14,7 @@ Rails.application.routes.draw do
       resources :performances
       resources :audition_journals
       resources :resources
+      post '/login', to: 'auth#login'
     end
   end
 

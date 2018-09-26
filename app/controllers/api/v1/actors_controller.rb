@@ -1,4 +1,5 @@
 class Api::V1::ActorsController < ApplicationController
+
   # before_action :set_actor, only: [:show, :update, :destroy]
 
   # GET /actors
@@ -19,10 +20,10 @@ class Api::V1::ActorsController < ApplicationController
   #
   # # POST /actors
   def create
-     byebug
-    @actor = Actor.new(actor_params)
 
-    if @actor.save
+    @actor = Actor.create(actor_params)
+
+    if @actor.valid?
       render json: ActorSerializer.new(@actor).to_json, status: :ok, status: :created
     # else
     #   render json: @actor.errors, status: :unprocessable_entity
