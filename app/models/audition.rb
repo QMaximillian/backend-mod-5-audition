@@ -6,7 +6,13 @@ class Audition < ApplicationRecord
   has_many :actor_tryouts, through: :tryouts, source: :actor, foreign_key: :actor_id, inverse_of: :tryout_auditions
 
 
-
+def submitted_times
+  array = []
+  self.tryouts.each do |tryout|
+    array << tryout.audition_time
+  end
+  array
+end
 
 
 end

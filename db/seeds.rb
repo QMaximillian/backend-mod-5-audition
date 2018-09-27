@@ -10,7 +10,7 @@
 
 Actor.create(first_name: "Quinn", last_name: "Lashinsky", password: "1", email: "example@example.com", birthday: "Fri, 12 Dec 1980", phone_number: "1111111111", equity: true, gender: "Male", city: "NYC", height: "72", ethnicity: "Ambiguous", vocal_range: "Tenor")
 
-Actor.create(first_name: "John", last_name: "Jones", password: "2", email: "john_jones@example.com", birthday: "Sun, 10 Mar 1940", phone_number: "2222222222", equity: false, gender: "Male", city: "NYC", height: "65", ethnicity: "Caucasian", vocal_range: "Baritone")
+# Actor.create(first_name: "John", last_name: "Jones", password: "2", email: "john_jones@example.com", birthday: "Sun, 10 Mar 1940", phone_number: "2222222222", equity: false, gender: "Male", city: "NYC", height: "65", ethnicity: "Caucasian", vocal_range: "Baritone")
 #
 # Actor.create(first_name: "Lisa", last_name: "Samuels", password: "3", email: "lisa-samuels@example.com", birthday: "Sun, 6 Oct 1957", phone_number: "3333333333", equity: true, gender: "Female", city: "NYC", height: "55", ethnicity: "Irish", vocal_range: "Soprano")
 #
@@ -106,13 +106,15 @@ Audition.create(show_id: 3, show_name: "Wicked", audition_date: "Wed, 11 Jul 201
 # Performance.create(show_id: 1, performance_datetime: "Thu, 22 Nov 2018 02:00:00 +0000")
 #
 #
-Resume.create(actor_id:	1, audition_id: 1, shows: 'Carousel, Showboat', characters: 'AAA, BBB', training: 'Temple University', skills: 'Juggling', default_resume: true)
+# Resume.create(actor_id:	1, audition_id: 1, shows: 'Carousel, Showboat', characters: 'AAA, BBB', training: 'Temple University', skills: 'Juggling', default_resume: true)
+# #
+# Resume.create(actor_id:	1, audition_id: 2, shows: '', characters: '', training: '', skills: '', default_resume: false)
 #
-Resume.create(actor_id:	1, audition_id: 2, shows: '', characters: '', training: '', skills: '', default_resume: false)
-#
-Tryout.create(actor_id: 1, audition_id: 1, city: "NYC", audition_time: "011:00:00 +0000" ,starred: true, callback: false, cast: false)
-Tryout.create(actor_id: 1, audition_id: 2, city: "NYC", audition_time: "012:00:00 +0000", starred: false, callback: false, cast: true)
-Tryout.create(actor_id: 1, audition_id: 3, city: "NYC", audition_time: "011:30:00 +0000", starred: false, callback: true, cast: false)
+# Tryout.create(actor_id: 1, audition_id: 1, city: "NYC", audition_time: "011:00:00 +0000" ,starred: true, callback: false, cast: false)
+# Tryout.create(actor_id: 1, audition_id: 2, city: "NYC", audition_time: "012:00:00 +0000", starred: false, callback: false, cast: true)
+# Tryout.create(actor_id: 1, audition_id: 3, city: "NYC", audition_time: "011:30:00 +0000", starred: false, callback: true, cast: false)
+
+
 # Tryout.create(actor_id: 1, audition_id: 2, city: "NYC", starred: true, callback: true, cast: false)
 # Tryout.create(actor_id: 1, audition_id: 3, city: "NYC", starred: false, callback: true, cast: false)
 # Tryout.create(actor_id: 1, audition_id: 4, city: "NYC", starred: false, callback: false, cast: false)
@@ -123,13 +125,13 @@ Tryout.create(actor_id: 1, audition_id: 3, city: "NYC", audition_time: "011:30:0
 # Tryout.create(actor_id: 1, audition_id: 9, city: "NYC", starred: false, callback: false, cast: false)
 # Tryout.create(actor_id: 1, audition_id: 10, city: "NYC", starred: false, callback: false, cast: false)
 
-AuditionJournal.create(tryout_id: 1, feeling: "good", journal: "It felt okay, but I think I need to warmup more before auditions")
+# AuditionJournal.create(tryout_id: 1, feeling: "good", journal: "It felt okay, but I think I need to warmup more before auditions")
 # could_do_better: "dancing", did_well: "singing", did_amazing: "monologues",	miscellaneous: "N/A", song_one: "Giants in the Sky", song_two: "Anything Goes", monologue_one: "MONO 1", monologue_two: "MONO 2",
 
-AuditionJournal.create(tryout_id: 2, feeling: "bad", journal: "It felt terrible, I feel sick")
+# AuditionJournal.create(tryout_id: 2, feeling: "bad", journal: "It felt terrible, I feel sick")
 # could_do_better: "singing", did_well: "dancing", did_amazing: "monologues",	miscellaneous: "N/A", song_one: "Singin in the Rains", song_two: "Summertime", monologue_one: "MONO 3", monologue_two: "MONO 4",
 
-AuditionJournal.create(tryout_id: 3, feeling: "okay", journal: "Felt amazing, looking forward to getting a callback")
+# AuditionJournal.create(tryout_id: 3, feeling: "okay", journal: "Felt amazing, looking forward to getting a callback")
 
 # could_do_better: "acting", did_well: "dancing", did_amazing: "singing",	miscellaneous: "N/A", song_one: "Think of Me", song_two: "Music of the Night", monologue_one: "MONO 5", monologue_two: "MONO 6",
 #

@@ -4,7 +4,7 @@ class Api::V1::AuthController < ApplicationController
     @actor = Actor.find_by(email: auth_params['email'])
 
     if @actor && @actor.authenticate(auth_params['password'])
-      render json: { actor: @actor }, status: :created
+      render json: ActorSerializer.new(@actor), status: :created
     else
       render json: {message: "Invalid Username or Password"}, status: :unauthorized
     end
