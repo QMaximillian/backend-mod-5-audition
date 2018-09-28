@@ -1,5 +1,5 @@
 class Api::V1::ActorsController < ApplicationController
-
+  skip_before_action :authorized, only: [:create]
   # before_action :set_actor, only: [:show, :update, :destroy]
 
   # GET /actors
@@ -24,11 +24,17 @@ class Api::V1::ActorsController < ApplicationController
     @actor = Actor.create(actor_params)
 
     if @actor.valid?
-      render json: ActorSerializer.new(@actor).to_json, status: :ok, status: :created
+      @token = encode_token(actor_id: @actor.id)
+      byebug
+      render json: { ActorSerializer.new(@actor).to_json, jwt: @token }, status: :ok, status: :created
+      byebug
+    else
+     render json: { error: 'failed to create user' }, status: :not_acceptable
+   end
+ end
     # else
     #   render json: @actor.errors, status: :unprocessable_entity
-    end
-  end
+
   #
   # # PATCH/PUT /actors/1
   def update
