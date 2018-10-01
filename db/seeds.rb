@@ -10,9 +10,9 @@
 
 Actor.create(first_name: "Quinn", last_name: "Lashinsky", password: "1", email: "example@example.com", birthday: "Fri, 12 Dec 1980", phone_number: "1111111111", equity: true, gender: "Male", city: "NYC", height: "72", ethnicity: "Ambiguous", vocal_range: "Tenor")
 
-# Actor.create(first_name: "John", last_name: "Jones", password: "2", email: "john_jones@example.com", birthday: "Sun, 10 Mar 1940", phone_number: "2222222222", equity: false, gender: "Male", city: "NYC", height: "65", ethnicity: "Caucasian", vocal_range: "Baritone")
-#
-# Actor.create(first_name: "Lisa", last_name: "Samuels", password: "3", email: "lisa-samuels@example.com", birthday: "Sun, 6 Oct 1957", phone_number: "3333333333", equity: true, gender: "Female", city: "NYC", height: "55", ethnicity: "Irish", vocal_range: "Soprano")
+Actor.create(first_name: "John", last_name: "Jones", password: "2", email: "john_jones@example.com", birthday: "Sun, 10 Mar 1940", phone_number: "2222222222", equity: false, gender: "Male", city: "NYC", height: "65", ethnicity: "Caucasian", vocal_range: "Baritone")
+
+Actor.create(first_name: "Lisa", last_name: "Samuels", password: "3", email: "lisa-samuels@example.com", birthday: "Sun, 6 Oct 1957", phone_number: "3333333333", equity: true, gender: "Female", city: "NYC", height: "55", ethnicity: "Irish", vocal_range: "Soprano")
 #
 # Actor.create(first_name: "Edward", last_name: "Mahdi", password: "4", email: "john_mahdi@example.com", birthday: "Mon, 9 Jan 1961", phone_number: "4444444444", equity: false, gender: "Male", city: "NYC", height: "78", ethnicity: "Indian", vocal_range: "Bass")
 #
@@ -52,21 +52,21 @@ Show.create(actor_id: 1, show_name: "Drowsy Chaperone", show_description: " It i
 #
 Show.create(actor_id: 1, show_name: "Wicked", show_description: "The musical is told from the perspective of the witches of the Land of Oz; its plot begins before and continues after Dorothy Gale's arrival in Oz from Kansas", location: "NYC", role: "Boq")
 #
-# Show.create(actor_id: 1, show_name: "John & Jen", show_description: "It is a two-person show about the relationships first between a brother and sister, John and Jen, and then, after John is killed, between Jen and her son, also named John", location: "NYC", role: "John")
-#
-# Show.create(actor_id: 1, show_name: "Rent", show_description: "It tells the story of a group of impoverished young artists struggling to survive and create a life in New York City's East Village in the thriving days of Bohemian Alphabet City, under the shadow of HIV/AIDS", location: "NYC", role: "Benjamin Coffin III")
-#
-# Show.create(actor_id: 1, show_name: "Uncle Vanya", show_description: "The play portrays the visit of an elderly professor and his glamorous, much younger second wife, Yelena, to the rural estate that supports their urban lifestyle", location: "NYC", role: "Alexander Vladimirovich Serebryakov")
-#
-# Show.create(actor_id: 1, show_name: "The Liar", show_description: "Paris, 1643. Dorante is a charming young man newly arrived in the capital, and he has but a single flaw: He cannot tell the truth", location: "NYC", role: "Alcippe")
-#
-# Show.create(actor_id: 1, show_name: "Death of A Salesman", show_description: "Willy Loman returns home exhausted after a business trip he has cancelled. Worried over Willy's state of mind and recent car accident, his wife Linda suggests that he ask his boss Howard Wagner to allow him to work in his home city so he will not have to travel.", location: "NYC", role: "Bernard")
-#
-# Show.create(actor_id: 1, show_name: "Hamlet", show_description: "The protagonist of Hamlet is Prince Hamlet of Denmark, son of the recently deceased King Hamlet, and nephew of King Claudius, his father's brother and successor. Claudius hastily married King Hamlet's widow, Gertrude, Hamlet's mother, and took the throne for himself. Denmark has a long-standing feud with neighbouring Norway, in which King Hamlet slew King Fortinbras of Norway in a battle some years ago. Although Denmark defeated Norway, and the Norwegian throne fell to King Fortinbras's infirm brother, Denmark fears that an invasion led by the dead Norwegian king's son, Prince Fortinbras, is imminent.", location: "NYC", role: "Laertes")
-#
-# Show.create(actor_id: 1, show_name: "A Raisin in the Sun", show_description: "Walter and Ruth Younger, their son Travis, along with Walter's mother Lena (Mama) and Walter's sister Beneatha, live in poverty in a dilapidated one-bedroom apartment on Chicago's south side. Walter is barely making a living as a limousine driver. Though Ruth is content with their lot, Walter is not and desperately wishes to become wealthy. His plan is to invest in a liquor store in partnership with Willy and Bobo, street-smart acquaintances of Walter's.", location: "NYC", role: "Travis")
-#
-# Show.create(actor_id: 1, show_name: "Follies", show_description: "The story concerns a reunion in a crumbling Broadway theatre, scheduled for demolition, of the past performers of the \"Weismann's Follies\", a musical revue (based on the Ziegfeld Follies), that played in that theatre between the World Wars", location: "NYC", role: "Chorus")
+Show.create(actor_id: 1, show_name: "John & Jen", show_description: "It is a two-person show about the relationships first between a brother and sister, John and Jen, and then, after John is killed, between Jen and her son, also named John", location: "NYC", role: "John")
+
+Show.create(actor_id: 1, show_name: "Rent", show_description: "It tells the story of a group of impoverished young artists struggling to survive and create a life in New York City's East Village in the thriving days of Bohemian Alphabet City, under the shadow of HIV/AIDS", location: "NYC", role: "Benjamin Coffin III")
+
+Show.create(actor_id: 1, show_name: "Uncle Vanya", show_description: "The play portrays the visit of an elderly professor and his glamorous, much younger second wife, Yelena, to the rural estate that supports their urban lifestyle", location: "NYC", role: "Alexander Vladimirovich Serebryakov")
+
+Show.create(actor_id: 1, show_name: "The Liar", show_description: "Paris, 1643. Dorante is a charming young man newly arrived in the capital, and he has but a single flaw: He cannot tell the truth", location: "NYC", role: "Alcippe")
+
+Show.create(actor_id: 1, show_name: "Death of A Salesman", show_description: "Willy Loman returns home exhausted after a business trip he has cancelled. Worried over Willy's state of mind and recent car accident, his wife Linda suggests that he ask his boss Howard Wagner to allow him to work in his home city so he will not have to travel.", location: "NYC", role: "Bernard")
+
+Show.create(actor_id: 1, show_name: "Hamlet", show_description: "The protagonist of Hamlet is Prince Hamlet of Denmark, son of the recently deceased King Hamlet, and nephew of King Claudius, his father's brother and successor. Claudius hastily married King Hamlet's widow, Gertrude, Hamlet's mother, and took the throne for himself. Denmark has a long-standing feud with neighbouring Norway, in which King Hamlet slew King Fortinbras of Norway in a battle some years ago. Although Denmark defeated Norway, and the Norwegian throne fell to King Fortinbras's infirm brother, Denmark fears that an invasion led by the dead Norwegian king's son, Prince Fortinbras, is imminent.", location: "NYC", role: "Laertes")
+
+Show.create(actor_id: 1, show_name: "A Raisin in the Sun", show_description: "Walter and Ruth Younger, their son Travis, along with Walter's mother Lena (Mama) and Walter's sister Beneatha, live in poverty in a dilapidated one-bedroom apartment on Chicago's south side. Walter is barely making a living as a limousine driver. Though Ruth is content with their lot, Walter is not and desperately wishes to become wealthy. His plan is to invest in a liquor store in partnership with Willy and Bobo, street-smart acquaintances of Walter's.", location: "NYC", role: "Travis")
+
+Show.create(actor_id: 1, show_name: "Follies", show_description: "The story concerns a reunion in a crumbling Broadway theatre, scheduled for demolition, of the past performers of the \"Weismann's Follies\", a musical revue (based on the Ziegfeld Follies), that played in that theatre between the World Wars", location: "NYC", role: "Chorus")
 
 
 #// END
@@ -82,14 +82,14 @@ Audition.create(show_id: 1, show_name: "Urinetown", audition_date: "Sat, 7 Jul 2
 #
 Audition.create(show_id: 2, show_name: "Drowsy Chaperone", audition_date: "Fri, 13 Jul 2018", audition_information: "Please bring 2 songs, and 2 monologues", location: "NYC", cast: false, begin_audition: "Fri, 13 Jul 2018 11:00:00 -0000", end_audition: "Fri, 13 Jul 2018 16:00:00 -0000", time_slots: 15)
 #
-Audition.create(show_id: 3, show_name: "Wicked", audition_date: "Wed, 11 Jul 2018", audition_information: "Please bring 2 songs, and 2 monologues", location: "NYC", cast: true, begin_audition: "Wed, 11 Jul 2018 10:00:00 -0000", end_audition: "Wed, 11 Jul 2018 15:00:00 -0000", time_slots: 15)
+Audition.create(show_id: 3, show_name: "Wicked", audition_date: "Wed, 11 Jul 2018", audition_information: "Please bring 2 songs, and 2 monologues", location: "NYC", cast: false, begin_audition: "Wed, 11 Jul 2018 10:00:00 -0000", end_audition: "Wed, 11 Jul 2018 15:00:00 -0000", time_slots: 20)
 
-# Audition.create(show_id: 4, show_name: "Jon & Jen", audition_time: "Sun, 8 Jul 2018 09:30:00 -0000", audition_information: "Please bring 2 songs, and 2 monologues", location: "NYC", cast: true)
-#
-# Audition.create(show_id: 5, show_name: "Rent", audition_time: "Mon, 23 Jul 2018 02:30:00 +0000", audition_information: "Please bring 2 songs, and 2 monologues", location: "NYC", cast: true)
-#
-# Audition.create(show_id: 6, show_name: "Uncle Vanya", audition_time: "Wed, 1 Aug 2018 011:00:00 +0000", audition_information: "Please bring 2 songs, and 2 monologues", location: "NYC", cast: true)
-#
+Audition.create(show_id: 4, show_name: "Jon & Jen", audition_information: "Please bring 2 songs, and 2 monologues", location: "NYC", cast: true, begin_audition: "Sun, 8 Jul 2018 08:00:00 -0000", end_audition: "Sun, 8 Jul 2018 12:00:00 -0000", time_slots: 30)
+
+Audition.create(show_id: 5, show_name: "Rent", audition_information: "Please bring 2 songs, and 2 monologues", location: "NYC", cast: true, begin_audition: "Mon, 23 Jul 2018 09:00:00 -0000", end_audition: "Mon, 23 Jul 2018 14:00:00 -0000", time_slots: 10)
+
+Audition.create(show_id: 6, show_name: "Uncle Vanya", audition_information: "Please bring 2 songs, and 2 monologues", location: "NYC", cast: true, begin_audition: "Wed, 1 Aug 2018 08:00:00 -0000", end_audition: "Wed, 1 Aug 2018 13:00:00 -0000", time_slots: 15)
+
 # Audition.create(show_id: 7, show_name: "The Liar", audition_time: "Tue, 5 Jun 2018 12:30:00 +0000", audition_information: "Please bring 2 songs, and 2 monologues", location: "NYC", cast: true)
 #
 # Audition.create(show_id: 8, show_name: "Death of a Salesman", audition_time: "Thu, 14 Jun 2018 01:30:00 +0000", audition_information: "Please bring 2 songs, and 2 monologues", location: "NYC", cast: true)
