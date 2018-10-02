@@ -62,7 +62,7 @@ Show.create(actor_id: 1, show_name: "The Liar", show_description: "Paris, 1643. 
 
 Show.create(actor_id: 1, show_name: "Death of A Salesman", show_description: "Willy Loman returns home exhausted after a business trip he has cancelled. Worried over Willy's state of mind and recent car accident, his wife Linda suggests that he ask his boss Howard Wagner to allow him to work in his home city so he will not have to travel.", location: "NYC", role: "Bernard")
 
-Show.create(actor_id: 1, show_name: "Hamlet", show_description: "The protagonist of Hamlet is Prince Hamlet of Denmark, son of the recently deceased King Hamlet, and nephew of King Claudius, his father's brother and successor. Claudius hastily married King Hamlet's widow, Gertrude, Hamlet's mother, and took the throne for himself. Denmark has a long-standing feud with neighbouring Norway, in which King Hamlet slew King Fortinbras of Norway in a battle some years ago. Although Denmark defeated Norway, and the Norwegian throne fell to King Fortinbras's infirm brother, Denmark fears that an invasion led by the dead Norwegian king's son, Prince Fortinbras, is imminent.", location: "NYC", role: "Laertes")
+Show.create(actor_id: 1, show_name: "Hamlet", location: "NYC", role: "Laertes")
 
 Show.create(actor_id: 1, show_name: "A Raisin in the Sun", show_description: "Walter and Ruth Younger, their son Travis, along with Walter's mother Lena (Mama) and Walter's sister Beneatha, live in poverty in a dilapidated one-bedroom apartment on Chicago's south side. Walter is barely making a living as a limousine driver. Though Ruth is content with their lot, Walter is not and desperately wishes to become wealthy. His plan is to invest in a liquor store in partnership with Willy and Bobo, street-smart acquaintances of Walter's.", location: "NYC", role: "Travis")
 
@@ -77,27 +77,28 @@ Show.create(actor_id: 1, show_name: "Follies", show_description: "The story conc
 # //AUDITIONS
 
 
-Audition.create(show_id: 1, show_name: "Urinetown", audition_date: "Sat, 7 Jul 2018", audition_information: "Please bring 2 songs, and 2 monologues", location: "NYC", cast: false, begin_audition: "Sat, 7 Jul 2018 10:00:00 -000", end_audition: "Sat, 7 Jul 2018 15:00:00 -000", time_slots: 15)
+Audition.create(show_id: 1, show_name: "Urinetown", audition_date: "Wed, 10 Oct 2018", audition_information: "Please bring 2 songs, and 2 monologues", location: "NYC", cast: false, begin_audition: "Sat, 7 Jul 2018 10:00:00 -000", end_audition: "Sat, 7 Jul 2018 15:00:00 -000", time_slots: 15)
 #
 #
 Audition.create(show_id: 2, show_name: "Drowsy Chaperone", audition_date: "Fri, 13 Jul 2018", audition_information: "Please bring 2 songs, and 2 monologues", location: "NYC", cast: false, begin_audition: "Fri, 13 Jul 2018 11:00:00 -0000", end_audition: "Fri, 13 Jul 2018 16:00:00 -0000", time_slots: 15)
 #
 Audition.create(show_id: 3, show_name: "Wicked", audition_date: "Wed, 11 Jul 2018", audition_information: "Please bring 2 songs, and 2 monologues", location: "NYC", cast: false, begin_audition: "Wed, 11 Jul 2018 10:00:00 -0000", end_audition: "Wed, 11 Jul 2018 15:00:00 -0000", time_slots: 20)
 
-Audition.create(show_id: 4, show_name: "Jon & Jen", audition_information: "Please bring 2 songs, and 2 monologues", location: "NYC", cast: true, begin_audition: "Sun, 8 Jul 2018 08:00:00 -0000", end_audition: "Sun, 8 Jul 2018 12:00:00 -0000", time_slots: 30)
+Audition.create(show_id: 4, show_name: "Jon & Jen", audition_information: "Please bring 2 songs, and 2 monologues", location: "NYC", cast: false, begin_audition: "Sun, 8 Jul 2018 08:00:00 -0000", end_audition: "Sun, 8 Jul 2018 12:00:00 -0000", time_slots: 30)
 
-Audition.create(show_id: 5, show_name: "Rent", audition_information: "Please bring 2 songs, and 2 monologues", location: "NYC", cast: true, begin_audition: "Mon, 23 Jul 2018 09:00:00 -0000", end_audition: "Mon, 23 Jul 2018 14:00:00 -0000", time_slots: 10)
+Audition.create(show_id: 5, show_name: "Rent", audition_information: "Please bring 2 songs, and 2 monologues", location: "NYC", cast: false, begin_audition: "Mon, 23 Jul 2018 09:00:00 -0000", end_audition: "Mon, 23 Jul 2018 14:00:00 -0000", time_slots: 10)
 
-Audition.create(show_id: 6, show_name: "Uncle Vanya", audition_information: "Please bring 2 songs, and 2 monologues", location: "NYC", cast: true, begin_audition: "Wed, 1 Aug 2018 08:00:00 -0000", end_audition: "Wed, 1 Aug 2018 13:00:00 -0000", time_slots: 15)
+Audition.create(show_id: 6, show_name: "Uncle Vanya", audition_information: "Please bring 2 songs, and 2 monologues", location: "NYC", cast: false, begin_audition: "Wed, 1 Aug 2018 08:00:00 -0000", end_audition: "Wed, 1 Aug 2018 13:00:00 -0000", time_slots: 15)
 
-# Audition.create(show_id: 7, show_name: "The Liar", audition_time: "Tue, 5 Jun 2018 12:30:00 +0000", audition_information: "Please bring 2 songs, and 2 monologues", location: "NYC", cast: true)
+Audition.create(show_id: 7, show_name: "The Liar", audition_information: "Please bring 2 songs, and 2 monologues", location: "NYC", cast: false, begin_audition: "Tue, 5 Jun 2018 12:30:00 +0000", end_audition: "Tue, 5 Jun 2018 14:30:00 +0000", time_slots: 10)
 #
-# Audition.create(show_id: 8, show_name: "Death of a Salesman", audition_time: "Thu, 14 Jun 2018 01:30:00 +0000", audition_information: "Please bring 2 songs, and 2 monologues", location: "NYC", cast: true)
+Audition.create(show_id: 8, show_name: "Death of a Salesman", audition_information: "Please bring 2 songs, and 2 monologues", location: "NYC", cast: false, begin_audition: "Thu, 14 Jun 2018 13:30:00 +0000", end_audition: "Thu, 14 Jun 2018 14:30:00 +0000", time_slots: 15)
 #
-# Audition.create(show_id: 9, show_name: "Hamlet", audition_time: "Fri, 28 Sep 2018 03:30:00 +0000", audition_information: "Please bring 2 songs, and 2 monologues", location: "NYC", cast: true)
-#
-# Audition.create(show_id: 10, show_name: "A Raisin in the Sun", audition_time: "Thu, 4 Oct 2018 11:00:00 +0000", audition_information: "Please bring 2 songs, and 2 monologues", location: "NYC", cast: true)
-#
+Audition.create(show_id: 9, show_name: "Hamlet", audition_information: "Please bring 2 songs, and 2 monologues", location: "NYC", cast: false, begin_audition: "Fri, 28 Sep 2018 15:00:00 +0000", end_audition: "Fri, 28 Sep 2018 18:00:00 +0000", time_slots: 15)
+
+
+Audition.create(show_id: 10, show_name: "A Raisin in the Sun", audition_information: "Please bring 2 songs, and 2 monologues", location: "NYC", cast: false, begin_audition: "Thu, 4 Oct 2018 11:00:00 +0000", end_audition: "Thu, 4 Oct 2018 15:00:00 +0000", time_slots: 15)
+
 # Audition.create(show_id: 11, show_name: "Follies", audition_time: "Fri, 6 Jul 2018 02:00:00 -0000", audition_information: "Please bring 2 songs, and 2 monologues", location: "NYC", cast: true)
 
 # // END

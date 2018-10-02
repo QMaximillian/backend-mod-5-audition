@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
 
+  resources :theaters
   resources :audition_times
   resources :seasons
 
