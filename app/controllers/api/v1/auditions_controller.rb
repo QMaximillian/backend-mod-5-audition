@@ -48,6 +48,6 @@ class Api::V1::AuditionsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def audition_params
-      params.require(:audition).permit(:show_id, :show_name, :audition_date, :audition_information, :feedback, :monologue_one, :monologue_two, :song_one, :song_two, :location,	:cast)
+      params.require(:audition).permit(:show_id, :show_name, :audition_date, :audition_information, :feedback, :monologue_one, :monologue_two, :song_one, :song_two, :location, :state,	:cast)
     end
 end

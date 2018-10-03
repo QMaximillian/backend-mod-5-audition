@@ -10,6 +10,7 @@ class CreateAuditions < ActiveRecord::Migration[5.2]
           t.datetime :begin_audition
           t.datetime :end_audition
           t.integer :time_slots
+          t.string :state
       t.timestamps
     end
   end

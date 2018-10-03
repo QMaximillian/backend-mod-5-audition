@@ -50,6 +50,7 @@ ActiveRecord::Schema.define(version: 2018_10_02_132017) do
     t.datetime "begin_audition"
     t.datetime "end_audition"
     t.integer "time_slots"
+    t.string "state"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
