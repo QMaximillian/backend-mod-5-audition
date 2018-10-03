@@ -18,7 +18,6 @@ ActiveRecord::Schema.define(version: 2018_10_02_132017) do
   create_table "actors", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
-    t.string "password"
     t.string "password_digest"
     t.string "email"
     t.date "birthday"
@@ -62,15 +61,6 @@ ActiveRecord::Schema.define(version: 2018_10_02_132017) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "resources", force: :cascade do |t|
-    t.integer "actor_id"
-    t.string "name"
-    t.string "link"
-    t.string "description"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "resumes", force: :cascade do |t|
     t.integer "actor_id"
     t.integer "audition_id"
@@ -84,12 +74,16 @@ ActiveRecord::Schema.define(version: 2018_10_02_132017) do
   end
 
   create_table "seasons", force: :cascade do |t|
+    t.integer "theater_id"
+    t.integer "year"
+    t.string "season_name"
+    t.string "season_description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "shows", force: :cascade do |t|
-    t.integer "actor_id"
+    t.integer "season_id"
     t.string "show_name"
     t.text "show_description"
     t.string "location"
@@ -99,6 +93,11 @@ ActiveRecord::Schema.define(version: 2018_10_02_132017) do
   end
 
   create_table "theaters", force: :cascade do |t|
+    t.string "theater_name"
+    t.string "theater_location"
+    t.text "theater_information"
+    t.text "theater_mission"
+    t.string "img_link"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

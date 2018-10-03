@@ -1,5 +1,8 @@
 class Audition < ApplicationRecord
   belongs_to :show
+  # , inverse_of: :auditions
+  # belongs_to :season
+  # belongs_to :theater
   has_many :tryouts
   has_many :resumes
   has_many :actors_submitted, :through => :resumes, :source => :actor, :foreign_key => :actor_id, :inverse_of => :applied_auditions

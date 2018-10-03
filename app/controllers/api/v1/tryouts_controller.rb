@@ -10,6 +10,8 @@ class Api::V1::TryoutsController < ApplicationController
 
   # GET /tryouts/1
   def show
+    @tryout = Tryout.find(params[:id])
+
     render json: TryoutSerializer.new(@tryout).to_json, status: :ok
   end
 

@@ -1,5 +1,5 @@
 class Api::V1::ShowsController < ApplicationController
-  # before_action :set_show, only: [:show, :update, :destroy]
+  before_action :set_show, only: [:show, :update, :destroy]
 
   # GET /shows
   def index
@@ -48,6 +48,6 @@ class Api::V1::ShowsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def show_params
-      params.require(:show).permit(:season_id, :actor_id, :show_name, :show_description, :location, :role)
+      params.require(:show).permit(:season_id, :show_name, :show_description, :location, :role)
     end
 end

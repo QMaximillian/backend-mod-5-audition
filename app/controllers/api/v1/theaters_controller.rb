@@ -1,16 +1,18 @@
-class TheatersController < ApplicationController
+class Api::V1::TheatersController < ApplicationController
   before_action :set_theater, only: [:show, :update, :destroy]
 
   # GET /theaters
   def index
     @theaters = Theater.all
 
-    render json: @theaters
+    render json: TheaterSerializer.new(@theaters).to_json, status: :ok
   end
 
   # GET /theaters/1
   def show
-    render json: @theater
+    @theater = Theater.find(params[:id])
+
+    render json: TheaterSerializer.new(@theater).to_json, status: :ok
   end
 
   # POST /theaters
@@ -18,7 +20,7 @@ class TheatersController < ApplicationController
     @theater = Theater.new(theater_params)
 
     if @theater.save
-      render json: @theater, status: :created, location: @theater
+      render json: TheaterSerializer.new(@theater).to_json, status: :created
     else
       render json: @theater.errors, status: :unprocessable_entity
     end
@@ -27,7 +29,7 @@ class TheatersController < ApplicationController
   # PATCH/PUT /theaters/1
   def update
     if @theater.update(theater_params)
-      render json: @theater
+      render json: TheaterSerializer.new(@theater).to_json, status: :ok
     else
       render json: @theater.errors, status: :unprocessable_entity
     end
@@ -46,6 +48,7 @@ class TheatersController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def theater_params
-      params.fetch(:theater, {})
+      params.require(:theater).permit(:theater_name,
+      :theater_location, :theater_information, :theater_mission)
     end
 end

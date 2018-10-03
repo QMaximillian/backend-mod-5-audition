@@ -1,10 +1,4 @@
 Rails.application.routes.draw do
-
-
-  resources :theaters
-  resources :audition_times
-  resources :seasons
-
   namespace :api do
     namespace :v1 do
       resources :resumes
@@ -14,7 +8,10 @@ Rails.application.routes.draw do
       resources :shows
       resources :performances
       resources :audition_journals
-      resources :resources
+      resources :theaters
+      resources :seasons
+      # resources :resources
+
       post '/login', to: 'auth#login'
     end
   end

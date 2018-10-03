@@ -13,6 +13,35 @@ Actor.create(first_name: "Quinn", last_name: "Lashinsky", password: "1", email: 
 Actor.create(first_name: "John", last_name: "Jones", password: "2", email: "john_jones@example.com", birthday: "Sun, 10 Mar 1940", phone_number: "2222222222", equity: false, gender: "Male", city: "NYC", height: "65", ethnicity: "Caucasian", vocal_range: "Baritone")
 
 Actor.create(first_name: "Lisa", last_name: "Samuels", password: "3", email: "lisa-samuels@example.com", birthday: "Sun, 6 Oct 1957", phone_number: "3333333333", equity: true, gender: "Female", city: "NYC", height: "55", ethnicity: "Irish", vocal_range: "Soprano")
+
+# THEATER /////////////////////////
+
+# Theater.create(theater_name: "", theater_location: "", theater_information: "", theater_mission: "")
+
+Theater.create(theater_name: "Roundabout Theater Company", theater_location: "NYC", theater_information: "We produce familiar and lesser-known plays and musicals with the ability to take artistic risk as only a not-for-profit can.
+
+We discover talented playwrights and provide them long-term artistic support to contribute to the future of the theatrical canon.
+
+We reduce the barriers—financial, physical and cultural—that can inhibit theatergoing.
+
+We collaborate with a diverse team of artists to identify programming for consideration.
+
+We build transformational education experiences that enhance teacher practice, deepen student learning, and ignite the futures of young people through career training and placement.
+
+We capture and archive over five decades of production history as an open resource for artists, scholars, and our community.  ", theater_mission: "We acknowledge that our society has been built on systems that marginalize many groups. We pledge to address the ways in which Roundabout has been a part of this marginalization and how those inequities can be corrected. We pledge to be accountable for identifying the inequities in our organization and in our industry and are working to break down barriers to ensure that all individuals—with all of our differences—have an opportunity to be included and to feel welcome in our spaces and artistic practices. We pledge that the stories we tell on our stages will reflect a wide variety of backgrounds. It is our sincere belief that these ongoing commitments are imperative to increase not only the quality of work on our stages but also the strength of our institution.", img_link: "https://images.bwwstatic.com/heads/rtc.jpeg")
+
+
+Theater.create(theater_name: "Second Stage Theater", theater_location: "NYC", theater_information: "Second Stage Theater was founded in 1979 to produce 'second stagings' of contemporary American plays that deserved to reach a wider audience. We soon expanded this mission to produce new plays by our developing corps of writers. Over time, our dedication to telling essential American stories in their most exciting forms has come to include genre-bending solo performances, cutting-edge theatrical events, explosive new musicals, and world and New York premieres by America’s most esteemed playwrights.", theater_mission: "Second Stage Theater produces work entirely by 21st century American playwrights both on and off Broadway. Dedicated to adventurous contemporary plays and musicals, bold new interpretations, and unique theatrical experiences, the work at Second Stage reflects diversity and inclusiveness.", img_link: "https://tinyurl.com/y7rkz7hr")
+
+# // END
+
+# // SEASON
+
+Season.create(theater_id: 1, year: 2018, season_name: "Classics", season_description: "A year of your favorite classics straight from the golden era")
+
+Season.create(theater_id: 2, year: 2018, season_name: "Dramas", season_description: "Intense dramas from the 21st century that will question your views of society")
+
+# // END
 #
 # Actor.create(first_name: "Edward", last_name: "Mahdi", password: "4", email: "john_mahdi@example.com", birthday: "Mon, 9 Jan 1961", phone_number: "4444444444", equity: false, gender: "Male", city: "NYC", height: "78", ethnicity: "Indian", vocal_range: "Bass")
 #
@@ -44,29 +73,28 @@ Actor.create(first_name: "Lisa", last_name: "Samuels", password: "3", email: "li
 
 
 
-# // SHOWS
 
-Show.create(actor_id: 1, show_name: "Urinetown", show_description: "People can't pee for free, they revolt", location: "NYC", role: "Tiny Tom")
+#// SHOWS
 
-Show.create(actor_id: 1, show_name: "Drowsy Chaperone", show_description: " It is a parody of American musical comedy of the 1920s", location: "NYC", role: "Adolpho")
+Show.create(season_id: 1, show_name: "Urinetown", show_description: "People can't pee for free, they revolt", location: "NYC", role: "Tiny Tom")
 #
-Show.create(actor_id: 1, show_name: "Wicked", show_description: "The musical is told from the perspective of the witches of the Land of Oz; its plot begins before and continues after Dorothy Gale's arrival in Oz from Kansas", location: "NYC", role: "Boq")
+Show.create(season_id: 1, show_name: "Drowsy Chaperone", show_description: " It is a parody of American musical comedy of the 1920s", location: "NYC", role: "Adolpho")
 #
-Show.create(actor_id: 1, show_name: "John & Jen", show_description: "It is a two-person show about the relationships first between a brother and sister, John and Jen, and then, after John is killed, between Jen and her son, also named John", location: "NYC", role: "John")
+Show.create(season_id: 1, show_name: "Wicked", show_description: "The musical is told from the perspective of the witches of the Land of Oz; its plot begins before and continues after Dorothy Gale's arrival in Oz from Kansas", location: "NYC", role: "Boq")
+#
+Show.create(season_id: 1, show_name: "John & Jen", show_description: "It is a two-person show about the relationships first between a brother and sister, John and Jen, and then, after John is killed, between Jen and her son, also named John", location: "NYC", role: "John")
 
-Show.create(actor_id: 1, show_name: "Rent", show_description: "It tells the story of a group of impoverished young artists struggling to survive and create a life in New York City's East Village in the thriving days of Bohemian Alphabet City, under the shadow of HIV/AIDS", location: "NYC", role: "Benjamin Coffin III")
+Show.create(season_id: 1, show_name: "Rent", show_description: "It tells the story of a group of impoverished young artists struggling to survive and create a life in New York City's East Village in the thriving days of Bohemian Alphabet City, under the shadow of HIV/AIDS", location: "NYC", role: "Benjamin Coffin III")
 
-Show.create(actor_id: 1, show_name: "Uncle Vanya", show_description: "The play portrays the visit of an elderly professor and his glamorous, much younger second wife, Yelena, to the rural estate that supports their urban lifestyle", location: "NYC", role: "Alexander Vladimirovich Serebryakov")
+Show.create(season_id: 2, show_name: "Uncle Vanya", show_description: "The play portrays the visit of an elderly professor and his glamorous, much younger second wife, Yelena, to the rural estate that supports their urban lifestyle", location: "NYC", role: "Alexander Vladimirovich Serebryakov")
 
-Show.create(actor_id: 1, show_name: "The Liar", show_description: "Paris, 1643. Dorante is a charming young man newly arrived in the capital, and he has but a single flaw: He cannot tell the truth", location: "NYC", role: "Alcippe")
+Show.create(season_id: 2, show_name: "The Liar", show_description: "Paris, 1643. Dorante is a charming young man newly arrived in the capital, and he has but a single flaw: He cannot tell the truth", location: "NYC", role: "Alcippe")
 
-Show.create(actor_id: 1, show_name: "Death of A Salesman", show_description: "Willy Loman returns home exhausted after a business trip he has cancelled. Worried over Willy's state of mind and recent car accident, his wife Linda suggests that he ask his boss Howard Wagner to allow him to work in his home city so he will not have to travel.", location: "NYC", role: "Bernard")
+Show.create(season_id: 2, show_name: "Death of A Salesman", show_description: "Willy Loman returns home exhausted after a business trip he has cancelled. Worried over Willy's state of mind and recent car accident, his wife Linda suggests that he ask his boss Howard Wagner to allow him to work in his home city so he will not have to travel.", location: "NYC", role: "Bernard")
 
-Show.create(actor_id: 1, show_name: "Hamlet", location: "NYC", role: "Laertes")
+Show.create(season_id: 2, show_name: "Hamlet", location: "NYC", role: "Laertes")
 
-Show.create(actor_id: 1, show_name: "A Raisin in the Sun", show_description: "Walter and Ruth Younger, their son Travis, along with Walter's mother Lena (Mama) and Walter's sister Beneatha, live in poverty in a dilapidated one-bedroom apartment on Chicago's south side. Walter is barely making a living as a limousine driver. Though Ruth is content with their lot, Walter is not and desperately wishes to become wealthy. His plan is to invest in a liquor store in partnership with Willy and Bobo, street-smart acquaintances of Walter's.", location: "NYC", role: "Travis")
-
-Show.create(actor_id: 1, show_name: "Follies", show_description: "The story concerns a reunion in a crumbling Broadway theatre, scheduled for demolition, of the past performers of the \"Weismann's Follies\", a musical revue (based on the Ziegfeld Follies), that played in that theatre between the World Wars", location: "NYC", role: "Chorus")
+Show.create(season_id: 2, show_name: "A Raisin in the Sun", show_description: "Walter and Ruth Younger, their son Travis, along with Walter's mother Lena (Mama) and Walter's sister Beneatha, live in poverty in a dilapidated one-bedroom apartment on Chicago's south side. Walter is barely making a living as a limousine driver. Though Ruth is content with their lot, Walter is not and desperately wishes to become wealthy. His plan is to invest in a liquor store in partnership with Willy and Bobo, street-smart acquaintances of Walter's.", location: "NYC", role: "Travis")
 
 
 #// END
@@ -104,6 +132,8 @@ Audition.create(show_id: 10, show_name: "A Raisin in the Sun", audition_informat
 # // END
 
 
+
+
 # Performance.create(show_id: 1, performance_datetime: "Thu, 22 Nov 2018 02:00:00 +0000")
 #
 #
@@ -137,3 +167,12 @@ Audition.create(show_id: 10, show_name: "A Raisin in the Sun", audition_informat
 # could_do_better: "acting", did_well: "dancing", did_amazing: "singing",	miscellaneous: "N/A", song_one: "Think of Me", song_two: "Music of the Night", monologue_one: "MONO 5", monologue_two: "MONO 6",
 #
 # Resource.create(actor_id: 1, name: "Cool Website", link: "www.coolwebsite.com", description: "The coolest website")
+
+
+
+
+# // SHOWS
+
+
+
+# Show.create(season_id: 2, show_name: "Follies", show_description: "The story concerns a reunion in a crumbling Broadway theatre, scheduled for demolition, of the past performers of the \"Weismann's Follies\", a musical revue (based on the Ziegfeld Follies), that played in that theatre between the World Wars", location: "NYC", role: "Chorus")

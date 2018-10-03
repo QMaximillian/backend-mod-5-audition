@@ -1,16 +1,18 @@
-class SeasonsController < ApplicationController
+class Api::V1::SeasonsController < ApplicationController
   before_action :set_season, only: [:show, :update, :destroy]
 
   # GET /seasons
   def index
     @seasons = Season.all
 
-    render json: @seasons
+    render json: SeasonSerializer.new(@seasons).to_json, status: :ok
   end
 
   # GET /seasons/1
   def show
-    render json: @season
+    @season = Season.find(params[:id])
+
+    render json: SeasonSerializer.new(@season).to_json, status: :ok
   end
 
   # POST /seasons
@@ -18,7 +20,7 @@ class SeasonsController < ApplicationController
     @season = Season.new(season_params)
 
     if @season.save
-      render json: @season, status: :created, location: @season
+      render json: SeasonSerializer.new(@season).to_json, status: :created
     else
       render json: @season.errors, status: :unprocessable_entity
     end
@@ -27,7 +29,7 @@ class SeasonsController < ApplicationController
   # PATCH/PUT /seasons/1
   def update
     if @season.update(season_params)
-      render json: @season
+      render json: SeasonSerializer.new(@season).to_json, status: :ok
     else
       render json: @season.errors, status: :unprocessable_entity
     end
@@ -46,6 +48,6 @@ class SeasonsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def season_params
-      params.fetch(:season, {})
+      params.require(:season).permit(:theater_id, :year, :season_name, :season_description)
     end
 end
