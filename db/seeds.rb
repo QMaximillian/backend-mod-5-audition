@@ -41,6 +41,8 @@ Season.create(theater_id: 1, year: 2018, season_name: "Classics", season_descrip
 
 Season.create(theater_id: 2, year: 2018, season_name: "Dramas", season_description: "Intense dramas from the 21st century that will question your views of society")
 
+Season.create(theater_id: 1, year: 2018, season_name: "Comedies", season_description: "Lighthearted quips to whet the appetite of any jokester ")
+
 # // END
 #
 # Actor.create(first_name: "Edward", last_name: "Mahdi", password: "4", email: "john_mahdi@example.com", birthday: "Mon, 9 Jan 1961", phone_number: "4444444444", equity: false, gender: "Male", city: "NYC", height: "78", ethnicity: "Indian", vocal_range: "Bass")
