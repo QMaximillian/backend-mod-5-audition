@@ -144,18 +144,19 @@ Audition.create(show_id: 4, show_name: "Mary Page Marlowe", audition_information
 
 Audition.create(show_id: 5, show_name: "Straight White Men", audition_information: "Please bring 2 songs, and 2 monologues", location: "Ripley-Grier Studios (520), 520 8th Ave, 17th Floor", cast: false, begin_audition: "Mon, 23 Jul 2018 09:00:00 -0000", end_audition: "Mon, 23 Jul 2018 14:00:00 -0000", time_slots: 10, state: "New York City, New York")
 
-# Audition.create(show_id: 6, show_name: "Uncle Vanya", audition_information: "Please bring 2 songs, and 2 monologues", location: "NYC", cast: false, begin_audition: "Wed, 1 Aug 2018 08:00:00 -0000", end_audition: "Wed, 1 Aug 2018 13:00:00 -0000", time_slots: 15, state: "New York City, New York")
-#
-# Audition.create(show_id: 7, show_name: "The Liar", audition_information: "Please bring 2 songs, and 2 monologues", location: "NYC", cast: false, begin_audition: "Tue, 5 Jun 2018 12:30:00 +0000", end_audition: "Tue, 5 Jun 2018 14:30:00 +0000", time_slots: 10, state: "New York City, New York")
-# #
-# Audition.create(show_id: 8, show_name: "Death of a Salesman", audition_information: "Please bring 2 songs, and 2 monologues", location: "NYC", cast: false, begin_audition: "Thu, 14 Jun 2018 13:30:00 +0000", end_audition: "Thu, 14 Jun 2018 14:30:00 +0000", time_slots: 15, state: "New York City, New York")
-# #
-# Audition.create(show_id: 9, show_name: "Hamlet", audition_information: "Please bring 2 songs, and 2 monologues", location: "NYC", cast: false, begin_audition: "Fri, 28 Sep 2018 15:00:00 +0000", end_audition: "Fri, 28 Sep 2018 18:00:00 +0000", time_slots: 15, state: "New York City, New York")
-#
-#
-# Audition.create(show_id: 10, show_name: "A Raisin in the Sun", audition_information: "Please bring 2 songs, and 2 monologues", location: "NYC", cast: false, begin_audition: "Thu, 4 Oct 2018 11:00:00 +0000", end_audition: "Thu, 4 Oct 2018 15:00:00 +0000", time_slots: 15, state: "New York City, New York")
 
-# Audition.create(show_id: 11, show_name: "Follies", audition_time: "Fri, 6 Jul 2018 02:00:00 -0000", audition_information: "Please bring 2 songs, and 2 monologues", location: "NYC", cast: true)
+Audition.create(show_id: 6, show_name: "Uncle Vanya", audition_information: "Please bring 2 songs, and 2 monologues", location: "Pearl Studios (520), 500 8th Ave, 3rd Floor", cast: false, begin_audition: "Wed, 1 Aug 2018 08:00:00 -0000", end_audition: "Wed, 1 Aug 2018 13:00:00 -0000", time_slots: 15, state: "New York City, New York")
+
+Audition.create(show_id: 7, show_name: "The Liar", audition_information: "Please bring 2 songs, and 2 monologues", location: "Pearl Studios (520), 500 8th Ave, 3rd Floor", cast: false, begin_audition: "Tue, 5 Jun 2018 12:30:00 +0000", end_audition: "Tue, 5 Jun 2018 14:30:00 +0000", time_slots: 10, state: "New York City, New York")
+#
+Audition.create(show_id: 8, show_name: "Death of a Salesman", audition_information: "Please bring 2 songs, and 2 monologues", location: "Pearl Studios (520), 500 8th Ave, 3rd Floor", cast: false, begin_audition: "Thu, 14 Jun 2018 13:30:00 +0000", end_audition: "Thu, 14 Jun 2018 14:30:00 +0000", time_slots: 15, state: "New York City, New York")
+#
+Audition.create(show_id: 9, show_name: "Hamlet", audition_information: "Please bring 2 songs, and 2 monologues", location: "Pearl Studios (520), 500 8th Ave, 3rd Floor", cast: false, begin_audition: "Fri, 28 Sep 2018 15:00:00 +0000", end_audition: "Fri, 28 Sep 2018 18:00:00 +0000", time_slots: 15, state: "New York City, New York")
+
+
+Audition.create(show_id: 10, show_name: "A Raisin in the Sun", audition_information: "Please bring 2 songs, and 2 monologues", location: "Pearl Studios (520), 500 8th Ave, 3rd Floor", cast: false, begin_audition: "Thu, 4 Oct 2018 11:00:00 +0000", end_audition: "Thu, 4 Oct 2018 15:00:00 +0000", time_slots: 15, state: "New York City, New York")
+
+# Audition.create(show_id: 11, show_name: "Follies", audition_time: "Fri, 6 Jul 2018 02:00:00 -0000", audition_information: "Please bring 2 songs, and 2 monologues", location: "Pearl Studios (520), 500 8th Ave, 3rd Floor", cast: true)
 
 # // END
 
