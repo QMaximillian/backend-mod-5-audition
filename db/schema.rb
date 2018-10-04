@@ -108,7 +108,7 @@ ActiveRecord::Schema.define(version: 2018_10_02_132017) do
     t.integer "show_id"
     t.integer "audition_id"
     t.string "audition_time"
-    t.string "city"
+    t.string "location"
     t.boolean "starred"
     t.boolean "callback"
     t.boolean "cast"
