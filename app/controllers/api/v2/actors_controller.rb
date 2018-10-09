@@ -18,7 +18,8 @@ class Api::V2::ActorsController < ApplicationController
 
     @actor = Actor.find(params[:id])
 
-    render json: @actor.format, status: :ok
+    render json:
+    @actor.format, status: :ok
   end
   #
   # # POST /actors

@@ -22,8 +22,10 @@ class Actor < ApplicationRecord
   end
 
   def format
-    {actor: self, applied_auditions: self.applied_auditions}
+    {authorization: {id: self.id, jwt: ''}, actor: self, applied_auditions: self.applied_auditions, tryout_auditions: self.tryout_auditions, resumes: self.resumes, audition_journals: self.audition_journals, shows: self.shows, tryouts: self.tryouts}
   end
+
+
 
 
 
