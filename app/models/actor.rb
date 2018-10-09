@@ -17,5 +17,15 @@ class Actor < ApplicationRecord
   has_many :resources
 
 
+  def formatted_birthday
+    self.birthday.strftime("%m/%d/%Y")
+  end
+
+  def format
+    {actor: self, applied_auditions: self.applied_auditions}
+  end
+
+
+
 
 end
