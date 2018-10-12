@@ -19,6 +19,14 @@ Rails.application.routes.draw do
     namespace :api do
       namespace :v2 do
         resources :actors
+        resources :auditions
+        resources :resumes
+        resources :tryouts
+        resources :shows
+        resources :performances
+        resources :audition_journals
+        resources :theaters
+        resources :seasons
     end
   end
 

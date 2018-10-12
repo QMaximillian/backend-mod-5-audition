@@ -1,4 +1,4 @@
-class Api::V1::ShowsController < ApplicationController
+class Api::V2::ShowsController < ApplicationController
   before_action :set_show, only: [:show, :update, :destroy]
 
   # GET /shows

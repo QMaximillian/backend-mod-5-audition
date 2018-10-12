@@ -1,27 +1,29 @@
-class Api::V1::ResumesController < ApplicationController
+class Api::V2::ResumesController < ApplicationController
   # before_action :set_resume, only: [:show, :update, :destroy]
 
   # GET /resumes
   def index
     @resumes = Resume.all
 
-    render json: ResumeSerializer.new(@resumes).to_json,  status: :ok
+    render json: @resumes,  status: :ok
   end
 
   # GET /resumes/1
   def show
     @resume = Resume.find(params[:id])
 
-    render json: ResumeSerializer.new(@resume).to_json,  status: :ok
+    render json: @resume.as_json,  status: :ok
   end
 
   # POST /resumes
   def create
 
+
     @resume = Resume.new(resume_params)
 
     if @resume.save
-      render json: ResumeSerializer.new(@resume).to_json, status: :created
+
+      render json: @resume, status: :created
     else
       render json: @resume.errors, status: :unprocessable_entity
     end
@@ -30,7 +32,7 @@ class Api::V1::ResumesController < ApplicationController
   # PATCH/PUT /resumes/1
   def update
     if @resume.update(resume_params)
-      render json: ResumeSerializer.new(@resume).to_json,  status: :ok
+      render json: @resume,  status: :ok
     else
       render json: @resume.errors, status: :unprocessable_entity
     end
@@ -49,6 +51,6 @@ class Api::V1::ResumesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def resume_params
-      params.require(:resume).permit(:actor_id, :audition_id, :shows, :training, :skills, :characters, :default_resume)
+      params.require(:resume).permit.(:title, :actor_id, :audition_id, :pdfUrl)
     end
 end

@@ -11,4 +11,8 @@ class Season < ApplicationRecord
     end.flatten
     audition
   end
+
+  def format
+    {season: self, shows: self.shows, auditions: self.auditions}
+  end
 end

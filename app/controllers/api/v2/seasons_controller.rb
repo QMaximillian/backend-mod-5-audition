@@ -1,18 +1,18 @@
-class Api::V1::SeasonsController < ApplicationController
+class Api::V2::SeasonsController < ApplicationController
   before_action :set_season, only: [:show, :update, :destroy]
 
   # GET /seasons
   def index
     @seasons = Season.all
 
-    render json: SeasonSerializer.new(@seasons).to_json, status: :ok
+    render json: @seasons, status: :ok
   end
 
   # GET /seasons/1
   def show
     @season = Season.find(params[:id])
 
-    render json: SeasonSerializer.new(@season).to_json, status: :ok
+    render json: @season.format, status: :ok
   end
 
   # POST /seasons
@@ -20,7 +20,7 @@ class Api::V1::SeasonsController < ApplicationController
     @season = Season.new(season_params)
 
     if @season.save
-      render json: SeasonSerializer.new(@season).to_json, status: :created
+      render json: @season, status: :created
     else
       render json: @season.errors, status: :unprocessable_entity
     end
@@ -29,7 +29,7 @@ class Api::V1::SeasonsController < ApplicationController
   # PATCH/PUT /seasons/1
   def update
     if @season.update(season_params)
-      render json: SeasonSerializer.new(@season).to_json, status: :ok
+      render json: @season, status: :ok
     else
       render json: @season.errors, status: :unprocessable_entity
     end

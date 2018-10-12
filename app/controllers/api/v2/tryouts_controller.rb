@@ -1,18 +1,18 @@
-class Api::V1::TryoutsController < ApplicationController
+class Api::V2::TryoutsController < ApplicationController
   # before_action :set_tryout, only: [:show, :update, :destroy]
 
   # GET /tryouts
   def index
     @tryouts = Tryout.all
 
-    render json: TryoutSerializer.new(@tryouts).to_json,  status: :ok
+    render json: @tryouts,  status: :ok
   end
 
   # GET /tryouts/1
   def show
     @tryout = Tryout.find(params[:id])
 
-    render json: TryoutSerializer.new(@tryout).to_json, status: :ok
+    render json: @tryout.format, status: :ok
   end
 
   # POST /tryouts
@@ -20,7 +20,7 @@ class Api::V1::TryoutsController < ApplicationController
     @tryout = Tryout.new(tryout_params)
 
     if @tryout.save
-      render json: TryoutSerializer.new(@tryout).to_json, status: :ok, status: :created
+      render json: @tryout, status: :ok, status: :created
     else
       render json: @tryout.errors, status: :unprocessable_entity
     end
@@ -29,7 +29,7 @@ class Api::V1::TryoutsController < ApplicationController
   # PATCH/PUT /tryouts/1
   def update
     if @tryout.update(tryout_params)
-      render json: TryoutSerializer.new(@tryout).to_json, status: :ok, status: :created
+      render json: @tryout, status: :ok, status: :created
     else
       render json: @tryout.errors, status: :unprocessable_entity
     end

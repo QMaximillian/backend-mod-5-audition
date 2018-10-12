@@ -21,4 +21,8 @@ class Theater < ApplicationRecord
       season.shows
     end.flatten
   end
+
+  def format
+    {theater: self, seasons: self.seasons, shows: self.get_shows, auditions: self.get_auditions}
+  end
 end

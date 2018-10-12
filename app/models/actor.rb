@@ -1,6 +1,6 @@
 class Actor < ApplicationRecord
 
-  has_secure_password
+  # has_secure_password
   # has_many :audition_journals
   has_many :resumes
   has_many :tryouts
@@ -16,15 +16,24 @@ class Actor < ApplicationRecord
   has_many :shows, through: :tryout_auditions
   has_many :resources
 
+  has_many_attached :resumes
+
+
+  # def pdf_link
+  #   if self.resumes.attached?
+  #     Rails.application.routes.url_helpers.rails_blob_path(self.resumes, only_path: true)
+  #   else
+  #     nil
+  #   end
+  # end
 
   def formatted_birthday
     self.birthday.strftime("%m/%d/%Y")
   end
 
   def format
-    {authorization: {id: self.id, jwt: ''}, actor: self, applied_auditions: self.applied_auditions, tryout_auditions: self.tryout_auditions, resumes: self.resumes, audition_journals: self.audition_journals, shows: self.shows, tryouts: self.tryouts}
+    {actor: self, authorization: {id: self.id, jwt: ''}, applied_auditions: self.applied_auditions, tryout_auditions: self.tryout_auditions, audition_journals: self.audition_journals, shows: self.shows, tryouts: self.tryouts, resumes: self.resumes.service_url}
   end
-
 
 
 

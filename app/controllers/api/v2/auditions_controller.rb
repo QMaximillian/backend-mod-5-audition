@@ -1,18 +1,18 @@
-class Api::V1::AuditionsController < ApplicationController
+class Api::V2::AuditionsController < ApplicationController
   # before_action :set_audition, only: [:show, :update, :destroy]
 
   # GET /auditions
   def index
     @auditions = Audition.all
 
-    render json: AuditionSerializer.new(@auditions).to_json, status: :ok
+    render json: @auditions, status: :ok
   end
 
   # GET /auditions/1
   def show
     @audition = Audition.find(params[:id])
 
-    render json: AuditionSerializer.new(@audition).to_json
+    render json: @audition.format
   end
 
   # POST /auditions
@@ -20,7 +20,7 @@ class Api::V1::AuditionsController < ApplicationController
     @audition = Audition.new(audition_params)
 
     if @audition.save
-      render json: AuditionSerializer.new(@audition).to_json, status: :created
+      render json: @audition, status: :created
     else
       render json: @audition.errors, status: :unprocessable_entity
     end
@@ -29,7 +29,7 @@ class Api::V1::AuditionsController < ApplicationController
   # PATCH/PUT /auditions/1
   def update
     if @audition.update(audition_params)
-      render json: AuditionSerializer.new(@audition).to_json, status: :ok
+      render json: @audition, status: :ok
     else
       render json: @audition.errors, status: :unprocessable_entity
     end

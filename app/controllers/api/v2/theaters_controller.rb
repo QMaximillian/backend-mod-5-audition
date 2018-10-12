@@ -1,18 +1,18 @@
-class Api::V1::TheatersController < ApplicationController
+class Api::V2::TheatersController < ApplicationController
   before_action :set_theater, only: [:show, :update, :destroy]
 
   # GET /theaters
   def index
     @theaters = Theater.all
 
-    render json: TheaterSerializer.new(@theaters).to_json, status: :ok
+    render json: @theaters, status: :ok
   end
 
   # GET /theaters/1
   def show
     @theater = Theater.find(params[:id])
 
-    render json: TheaterSerializer.new(@theater).to_json, status: :ok
+    render json: @theater.format, status: :ok
   end
 
   # POST /theaters

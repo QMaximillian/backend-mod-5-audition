@@ -1,4 +1,4 @@
-class Api::V1::PerformancesController < ApplicationController
+class Api::V2::PerformancesController < ApplicationController
   before_action :set_performance, only: [:show, :update, :destroy]
 
   # GET /performances

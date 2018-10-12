@@ -17,5 +17,9 @@ def submitted_times
   array
 end
 
+def format
+  {audition: self, actor_tryouts: self.actor_tryouts, resumes: self.resumes, actors_submitted: self.actors_submitted, tryouts: self.tryouts, submitted_times: self.submitted_times, state: self.state}
+end
+
 
 end

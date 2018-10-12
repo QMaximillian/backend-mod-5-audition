@@ -13,6 +13,7 @@ class CreateActors < ActiveRecord::Migration[5.2]
       t.string :height
       t.string :ethnicity
       t.string :vocal_range
+      t.string :resumes
       t.timestamps
     end
   end

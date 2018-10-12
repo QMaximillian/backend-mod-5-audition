@@ -1,4 +1,4 @@
-class Api::V1::AuditionJournalsController < ApplicationController
+class Api::V2::AuditionJournalsController < ApplicationController
   # before_action :set_audition_journal, only: [:show, :update, :destroy]
 
   # GET /audition_journals
