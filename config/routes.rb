@@ -20,7 +20,6 @@ Rails.application.routes.draw do
       namespace :v2 do
         resources :actors
         resources :auditions
-        resources :resumes
         resources :tryouts
         resources :shows
         resources :performances

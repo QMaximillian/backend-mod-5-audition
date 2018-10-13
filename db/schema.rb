@@ -84,15 +84,6 @@ ActiveRecord::Schema.define(version: 2018_10_11_021826) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "resumes", force: :cascade do |t|
-    t.integer "actor_id"
-    t.integer "audition_id"
-    t.string "resume"
-    t.string "file_name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "seasons", force: :cascade do |t|
     t.integer "theater_id"
     t.integer "year"

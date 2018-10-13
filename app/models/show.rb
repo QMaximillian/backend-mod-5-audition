@@ -6,6 +6,6 @@ class Show < ApplicationRecord
   # , inverse_of: :shows
   has_many :performances
   has_many :tryouts
-  has_many :actors, through: :auditions
+  has_many :actors, through: :tryouts
   # has_many :characters
 end

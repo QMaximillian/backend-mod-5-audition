@@ -6,7 +6,7 @@ class Api::V2::AuthController < ApplicationController
 
     if @actor && @actor.authenticate(auth_params['password'])
       token = encode_token({ actor_id: @actor.id })
-      render json: { actor: ActorSerializer.new(@actor).to_json, jwt: @token }, status: :created
+      render json: { actor: @actor, jwt: @token }, status: :created
     else
       render json: {message: "Invalid Username or Password"}, status: :unauthorized
     end
