@@ -17,7 +17,6 @@ class Api::V2::TryoutsController < ApplicationController
 
   # POST /tryouts
   def create
-    byebug
     @tryout = Tryout.new(tryout_params)
 
     if @tryout.save
