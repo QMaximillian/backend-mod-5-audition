@@ -18,8 +18,6 @@ class Actor < ApplicationRecord
   has_many :shows, through: :auditions
   has_many :resources
 
-  # has_many_attached :resumes
-
 
   # def pdf_link
   #   if self.resumes.attached?
