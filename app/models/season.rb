@@ -13,6 +13,6 @@ class Season < ApplicationRecord
   end
 
   def format
-    {season: self, shows: self.shows, auditions: self.auditions}
+   {season: self, shows: self.shows, auditions: self.auditions}
   end
 end

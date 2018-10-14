@@ -5,14 +5,14 @@ class Api::V2::ShowsController < ApplicationController
   def index
     @shows = Show.all
 
-    render json: ShowSerializer.new(@shows).to_json, status: :ok
+    render json: @shows, status: :ok
   end
 
   # GET /shows/1
   def show
 
     @show = Show.find(params[:id])
-    render json: ShowSerializer.new(@show).to_json, status: :ok
+    render json: @show, status: :ok
   end
 
   # POST /shows
@@ -20,7 +20,7 @@ class Api::V2::ShowsController < ApplicationController
     @show = Show.new(show_params)
 
     if @show.save
-      render json: ShowSerializer.new(@show).to_json, status: :created
+      render json: @show, status: :created
     else
       render json: @show.errors, status: :unprocessable_entity
     end
@@ -29,7 +29,7 @@ class Api::V2::ShowsController < ApplicationController
   # PATCH/PUT /shows/1
   def update
     if @show.update(show_params)
-      render json: ShowSerializer.new(@show).to_json, status: :ok
+      render json: @show, status: :ok
     else
       render json: @show.errors, status: :unprocessable_entity
     end

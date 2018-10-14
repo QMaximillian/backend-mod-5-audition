@@ -10,17 +10,21 @@ class Audition < ApplicationRecord
   has_many :actors, through: :tryouts
 
 
-def submitted_times
-  array = []
-  self.tryouts.each do |tryout|
-    array << tryout.audition_time
+  def submitted_times
+    array = []
+    self.tryouts.each do |tryout|
+      array << tryout.audition_time
+    end
+    array
   end
-  array
-end
 
-def format
-  {audition: self, actor_tryouts: self.actor_tryouts, actors_submitted: self.actors_submitted, tryouts: self.tryouts, submitted_times: self.submitted_times, state: self.state}
-end
+  def format
+    {audition: self, tryouts: self.tryouts, submitted_times: self.submitted_times, state: self.state}
+  end
+
+  def self.index_format
+    Audition.all.map { |audition| {audition: audition, tryouts: audition.tryouts}}
+  end
 
 
 end

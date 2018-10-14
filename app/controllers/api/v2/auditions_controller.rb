@@ -3,9 +3,7 @@ class Api::V2::AuditionsController < ApplicationController
 
   # GET /auditions
   def index
-    @auditions = Audition.all
-
-    render json: @auditions, status: :ok
+    render json: Audition.index_format, status: :ok
   end
 
   # GET /auditions/1

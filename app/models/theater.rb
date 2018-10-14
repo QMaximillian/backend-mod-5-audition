@@ -27,8 +27,6 @@ class Theater < ApplicationRecord
   end
 
   def self.index_format
-    Theater.all.map do |theater|
-    {theater: theater, seasons: theater.seasons, shows: theater.get_shows}
+    Theater.all.map {|theater| {theater: theater, seasons: theater.seasons, shows: theater.get_shows}}
     end
-  end
 end

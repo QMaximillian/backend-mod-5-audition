@@ -170,9 +170,9 @@ Audition.create(show_id: 10, show_name: "A Raisin in the Sun", audition_informat
 # #
 # Resume.create(actor_id:	1, audition_id: 2, shows: '', characters: '', training: '', skills: '', default_resume: false)
 #
-# Tryout.create(actor_id: 1, audition_id: 1, city: "NYC", audition_time: "011:00:00 +0000" ,starred: true, callback: false, cast: false)
-# Tryout.create(actor_id: 1, audition_id: 2, city: "NYC", audition_time: "012:00:00 +0000", starred: false, callback: false, cast: true)
-# Tryout.create(actor_id: 1, audition_id: 3, city: "NYC", audition_time: "011:30:00 +0000", starred: false, callback: true, cast: false)
+Tryout.create(actor_id: 1, audition_id: 1, audition_time: "011:00:00 +0000" ,starred: true, callback: false, cast: false)
+Tryout.create(actor_id: 1, audition_id: 2, audition_time: "012:00:00 +0000", starred: false, callback: false, cast: true)
+Tryout.create(actor_id: 1, audition_id: 3, audition_time: "011:30:00 +0000", starred: false, callback: true, cast: false)
 
 
 # Tryout.create(actor_id: 1, audition_id: 2, city: "NYC", starred: true, callback: true, cast: false)
