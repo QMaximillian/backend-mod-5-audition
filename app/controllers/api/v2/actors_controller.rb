@@ -7,10 +7,7 @@ class Api::V2::ActorsController < ApplicationController
   # end
   # GET /actors
   def index
-    @actors = Actor.all
-
-
-    render json: @actors, status: :ok
+    render json: Actor.index_format, status: :ok
   end
 
   # GET /actors/1

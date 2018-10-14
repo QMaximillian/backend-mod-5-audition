@@ -37,6 +37,12 @@ class Actor < ApplicationRecord
     {actor: self, authorization: {id: self.id, jwt: ''}, tryouts: self.tryouts, audition_journals: self.audition_journals, shows: self.shows}
   end
 
+  def self.index_format
+      Actor.all.map do |actor|
+        {actor: actor, tryouts: actor.tryouts}
+      end
+  end
+
 
 
 

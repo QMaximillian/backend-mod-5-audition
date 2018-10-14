@@ -5,7 +5,7 @@ class Api::V2::TheatersController < ApplicationController
   def index
     @theaters = Theater.all
 
-    render json: @theaters, status: :ok
+    render json: Theater.index_format, status: :ok
   end
 
   # GET /theaters/1
@@ -20,7 +20,7 @@ class Api::V2::TheatersController < ApplicationController
     @theater = Theater.new(theater_params)
 
     if @theater.save
-      render json: TheaterSerializer.new(@theater).to_json, status: :created
+      render json: @theater.format, status: :created
     else
       render json: @theater.errors, status: :unprocessable_entity
     end
@@ -29,7 +29,7 @@ class Api::V2::TheatersController < ApplicationController
   # PATCH/PUT /theaters/1
   def update
     if @theater.update(theater_params)
-      render json: TheaterSerializer.new(@theater).to_json, status: :ok
+      render json: @theater.format, status: :ok
     else
       render json: @theater.errors, status: :unprocessable_entity
     end

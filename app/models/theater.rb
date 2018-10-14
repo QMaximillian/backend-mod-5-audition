@@ -25,4 +25,10 @@ class Theater < ApplicationRecord
   def format
     {theater: self, seasons: self.seasons, shows: self.get_shows, auditions: self.get_auditions}
   end
+
+  def self.index_format
+    Theater.all.map do |theater|
+    {theater: theater, seasons: theater.seasons, shows: theater.get_shows}
+    end
+  end
 end
