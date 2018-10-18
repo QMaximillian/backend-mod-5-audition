@@ -48,6 +48,6 @@ class Api::V1::TryoutsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def tryout_params
-      params.require(:tryout).permit(:actor_id, :audition_id, :audition_time, :location, :starred, :callback, :cast)
+      params.require(:tryout).permit(:actor_id, :audition_id, :audition_time, :location, :starred, :callback, :cast, :resume)
     end
 end
