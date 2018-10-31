@@ -136,9 +136,9 @@ Show.create(season_id: 3, show_name: "Do You Feel Anger", show_description: "Sof
 # Audition.create(show_id: 1, show_name: "Torch Song", audition_date: "Wed, 10 Oct 2018", audition_information: "Please bring 2 songs, and 2 monologues", location: "Ripley-Grier Studios (520), 520 8th Ave, 17th Floor", cast: false, begin_audition: "Sat, 7 Jul 2018 10:00:00 -000", end_audition: "Sat, 7 Jul 2018 15:00:00 -000", time_slots: 15, state: "New York City, New York")
 # #
 # #
-# Audition.create(show_id: 2, show_name: "Cardinal", audition_date: "Fri, 13 Jul 2018", audition_information: "Please bring 2 songs, and 2 monologues", location: "Ripley-Grier Studios (520), 520 8th Ave, 17th Floor", cast: false, begin_audition: "Fri, 13 Jul 2018 11:00:00 -0000", end_audition: "Fri, 13 Jul 2018 16:00:00 -0000", time_slots: 15, state: "New York City, New York")
+Audition.create(show_id: 2, show_name: "Cardinal", audition_date: "Fri, 13 Jul 2018", audition_information: "Please bring 2 songs, and 2 monologues", location: "Ripley-Grier Studios (520), 520 8th Ave, 17th Floor", cast: false, begin_audition: "2018-10-27T14:30:00Z", end_audition: "2018-10-27T15:30:00Z", time_slots: 15, state: "New York City, New York")
 #
-Audition.create(show_id: 3, show_name: "Lobby Hero", audition_date: "Wed, 11 Jul 2018", audition_information: "Please bring 2 songs, and 2 monologues", location: "Ripley-Grier Studios (520), 520 8th Ave, 17th Floor", cast: false, begin_audition: "2018-07-11T10:00:00Z", end_audition: "2018-07-11T15:00:00Z", time_slots: 20, state: "New York City, New York")
+Audition.create(show_id: 3, show_name: "Lobby Hero", audition_date: "Wed, 11 Jul 2018", audition_information: "Please bring 2 songs, and 2 monologues", location: "Ripley-Grier Studios (520), 520 8th Ave, 17th Floor", cast: false, begin_audition: "2018-10-25T12:30:00Z", end_audition: "2018-10-25T13:30:00Z", time_slots: 15, state: "New York City, New York")
 
 # Audition.create(show_id: 4, show_name: "Mary Page Marlowe", audition_information: "Please bring 2 songs, and 2 monologues", location: "Ripley-Grier Studios (520), 520 8th Ave, 17th Floor", cast: false, begin_audition: "Sun, 8 Jul 2018 08:00:00 -0000", end_audition: "Sun, 8 Jul 2018 12:00:00 -0000", time_slots: 30, state: "New York City, New York")
 #
