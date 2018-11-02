@@ -137,7 +137,7 @@ Show.create(season_id: 3, show_name: "Do You Feel Anger", show_description: "Sof
 # #
 # #
 Audition.create(show_id: 2, show_name: "Cardinal", audition_date: "Fri, 13 Jul 2018", audition_information: "Please bring 2 songs, and 2 monologues", cast: false, begin_audition: "2018-10-27T14:30:00Z", end_audition: "2018-10-27T15:30:00Z", time_slots: 15, state: "New York City, New York", call_type: "EPA", contract: "LOA-NYC $582/week", personnel: "
-Written by Christopher Chen{'\n'}
+Written by Christopher Chen\n
 
 Directed by Saheem Ali", show_dates: "First Rehearsal: March 25, 2019\n
 Tech: April 16 - 21, 2019\n
@@ -152,32 +152,32 @@ Equity’s contracts prohibit discrimination. Equity is committed to diversity a
 
 Always bring your Equity Membership card to auditions.", seeking: "Equity actors for 9 roles. See breakdown.", breakdown: "B
 Female, early to mid 30’s, Latinx, East Asian, Native American, Middle Eastern or Multiracial. She is a well-respected doctor who befriends F, partly just to see if it is possible to have a true friendship with someone from the oppressing country. B is very level headed, open-minded and warm. Her generosity of spirit is put to the test when she is falsely accused of harming Q.
-WOULD ALSO PLAY Q ON EVERY OTHER PERFORMANCE.\n
+WOULD ALSO PLAY Q ON EVERY OTHER PERFORMANCE.\n\n
 
 Q
 Female, mid 20’s, Latinx, East Asian, Native American, Middle Eastern or Multiracial. She has newly arrived in Country X, where her fiancé has moved to take advantage of a good business opportunity. She is excited to get to know the culture from within but when things get hard, she discovers she harbors some unconscious prejudices. She is curious, intellectual and though wide-eyed, she falls short of being naive.
-WOULD ALSO PLAY B ON EVERY OTHER PERFORMANCE.\n
+WOULD ALSO PLAY B ON EVERY OTHER PERFORMANCE.\n\n
 
 F
 Female, mid 30’s, Indian or South Asian. A teacher, she has just moved to Country X for a job at the National School. She is aware of all it means to be from the oppressing country and tries to be a positive force. She is kind, open-hearted and a great conversationalist. She’s very aware of and adept at talking about the prevailing racial/political issues.
-WOULD ALSO PLAY H ON EVERY OTHER PERFORMANCE.\n
+WOULD ALSO PLAY H ON EVERY OTHER PERFORMANCE.\n\n
 
 H
-Female, 30’s or early 40’s, African American. H is the most outspoken member of her social group and is a staunch defender of Country X’s rights. She is compassionately passionate and has innate leadership qualities, so people listen when she holds court. She is smart, fiery and a little unpredictable. WOULD ALSO PLAY F ON EVERY OTHER PERFORMANCE.\n
+Female, 30’s or early 40’s, African American. H is the most outspoken member of her social group and is a staunch defender of Country X’s rights. She is compassionately passionate and has innate leadership qualities, so people listen when she holds court. She is smart, fiery and a little unpredictable. WOULD ALSO PLAY F ON EVERY OTHER PERFORMANCE.\n\n
 
 O
-Male, early to mid 30’s, African American. A businessman, O is the peacemaker of the group. He tries to see what ever issue he is looking at from all sides. He is gregarious, happy and has a joyful openness. WOULD ALSO PLAY R ON EVERY OTHER PERFORMANCE.\n
+Male, early to mid 30’s, African American. A businessman, O is the peacemaker of the group. He tries to see what ever issue he is looking at from all sides. He is gregarious, happy and has a joyful openness. WOULD ALSO PLAY R ON EVERY OTHER PERFORMANCE.\n\n
 
 R
-Male, mid 20’s to early 30’s, Indian or South Asian. He is Q’s fiancé and he has found moving to Country X more complicated than he expected. He is glad Q has arrived but worries she doesn’t quite understand the landscape. He tries hard and can be playful. He is a real guy’s guy, a good friend and protector. WOULD ALSO PLAY O ON EVERY OTHER PERFORMANCE.\n
+Male, mid 20’s to early 30’s, Indian or South Asian. He is Q’s fiancé and he has found moving to Country X more complicated than he expected. He is glad Q has arrived but worries she doesn’t quite understand the landscape. He tries hard and can be playful. He is a real guy’s guy, a good friend and protector. WOULD ALSO PLAY O ON EVERY OTHER PERFORMANCE.\n\n
 
 J
 (also to play Mosquito)
-Male, 40’s, Latinx, East Asian, Native American, Middle Eastern or Multiracial. J is a Country Y citizen who is a “Security Liaison” in Country X. He is R’s friend and confidante. He has military command but still has soft edges -the type of leader who commands respect from all kinds. WOULD ALSO PLAY D ON EVERY OTHER PERFORMANCE.\n
+Male, 40’s, Latinx, East Asian, Native American, Middle Eastern or Multiracial. J is a Country Y citizen who is a “Security Liaison” in Country X. He is R’s friend and confidante. He has military command but still has soft edges -the type of leader who commands respect from all kinds. WOULD ALSO PLAY D ON EVERY OTHER PERFORMANCE.\n\n
 
 D
 (also to play S and Gecko)
-Male, 40’s, Latinx, East Asian, Native American or Multiracial. D is the Head Doctor at the hospital where B works. He has all the power and arrogance his position implies, but at heart he is a grounded, kind and humane person. WOULD ALSO PLAY J ON EVERY OTHER PERFORMANCE.\n
+Male, 40’s, Latinx, East Asian, Native American or Multiracial. D is the Head Doctor at the hospital where B works. He has all the power and arrogance his position implies, but at heart he is a grounded, kind and humane person. WOULD ALSO PLAY J ON EVERY OTHER PERFORMANCE.\n\n
 
 G
 any gender, late 40’s - 60’s, people of color. G is a Religious Studies Professor. G serves as the ultimate guide and conscience of the play. G is wise, calm, and spiritual. Need an actor with great facility for language, who can seduce an audience and make a real connection while delivering a direct address.", location: "
