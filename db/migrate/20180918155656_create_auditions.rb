@@ -11,6 +11,14 @@ class CreateAuditions < ActiveRecord::Migration[5.2]
           t.datetime :end_audition
           t.integer :time_slots
           t.string :state
+          t.string :call_type
+          t.string :contract
+          t.string :personnel
+          t.string :show_dates
+          t.string :other
+          t.string :seeking
+          t.string :breakdown
+          t.string :location
       t.timestamps
     end
   end

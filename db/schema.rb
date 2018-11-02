@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_11_021826) do
+ActiveRecord::Schema.define(version: 2018_10_18_012612) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -49,7 +49,6 @@ ActiveRecord::Schema.define(version: 2018_10_11_021826) do
     t.string "height"
     t.string "ethnicity"
     t.string "vocal_range"
-    t.string "resumes"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -73,6 +72,13 @@ ActiveRecord::Schema.define(version: 2018_10_11_021826) do
     t.datetime "end_audition"
     t.integer "time_slots"
     t.string "state"
+    t.string "call_type"
+    t.string "contract"
+    t.string "personnel"
+    t.string "show_dates"
+    t.string "other"
+    t.string "seeking"
+    t.string "breakdown"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -80,18 +86,6 @@ ActiveRecord::Schema.define(version: 2018_10_11_021826) do
   create_table "performances", force: :cascade do |t|
     t.integer "show_id"
     t.datetime "performance_datetime"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "resumes", force: :cascade do |t|
-    t.integer "actor_id"
-    t.integer "audition_id"
-    t.string "shows"
-    t.string "training"
-    t.string "skills"
-    t.string "characters"
-    t.boolean "default_resume"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
