@@ -136,7 +136,7 @@ Show.create(season_id: 3, show_name: "Do You Feel Anger", show_description: "Sof
 # Audition.create(show_id: 1, show_name: "Torch Song", audition_date: "Wed, 10 Oct 2018", audition_information: "Please bring 2 songs, and 2 monologues", location: "Ripley-Grier Studios (520), 520 8th Ave, 17th Floor", cast: false, begin_audition: "Sat, 7 Jul 2018 10:00:00 -000", end_audition: "Sat, 7 Jul 2018 15:00:00 -000", time_slots: 15, state: "New York City, New York")
 # #
 # #
-Audition.create(show_id: 2, show_name: "Cardinal", audition_date: "Fri, 13 Jul 2018", audition_information: "Please bring 2 songs, and 2 monologues", cast: false, begin_audition: "2018-10-27T14:30:00Z", end_audition: "2018-10-27T15:30:00Z", time_slots: 15, state: "New York City, New York", call_type: "EPA", contract: "LOA-NYC $582/week", personnel: "
+Audition.create(show_id: 2, show_name: "Cardinal", audition_date: "Fri, 09 Nov 2018", audition_information: "Please bring 2 songs, and 2 monologues", cast: false, begin_audition: "2018-11-09T14:30:00Z", end_audition: "2018-11-09T15:30:00Z", time_slots: 15, state: "New York City, New York", call_type: "EPA", contract: "LOA-NYC $582/week", personnel: "
 Written by Christopher Chen\n
 
 Directed by Saheem Ali", show_dates: "First Rehearsal: March 25, 2019\n
@@ -186,7 +186,7 @@ Actors' Equity New York Audition Center\n
 16th Fl\n
 New York, NY 10036")
 #
-Audition.create(show_id: 3, show_name: "Lobby Hero", audition_date: "Wed, 11 Jul 2018", audition_information: "Please bring 2 songs, and 2 monologues", cast: false, begin_audition: "2018-10-25T12:30:00Z", end_audition: "2018-10-25T13:30:00Z", time_slots: 15, state: "New York City, New York", call_type: "EPA", contract: "LOA-NYC $582/week", personnel: "
+Audition.create(show_id: 3, show_name: "Lobby Hero", audition_date: "Fri, 09 Nov 2018", audition_information: "Please bring 2 songs, and 2 monologues", cast: false, begin_audition: "2018-11-09T12:30:00Z", end_audition: "2018-11-09T13:30:00Z", time_slots: 15, state: "New York City, New York", call_type: "EPA", contract: "LOA-NYC $582/week", personnel: "
 Written by Christopher Chen\n
 
 Directed by Saheem Ali", show_dates: "First Rehearsal: March 25, 2019\n
