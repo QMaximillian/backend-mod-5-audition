@@ -9,6 +9,7 @@ class CreateTryouts < ActiveRecord::Migration[5.2]
         t.boolean :starred
         t.boolean	:callback
         t.boolean :cast
+        t.string :show_name
       t.timestamps
 
     end

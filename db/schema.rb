@@ -128,6 +128,7 @@ ActiveRecord::Schema.define(version: 2018_10_18_012612) do
     t.boolean "starred"
     t.boolean "callback"
     t.boolean "cast"
+    t.string "show_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
