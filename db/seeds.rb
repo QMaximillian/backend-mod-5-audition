@@ -184,7 +184,7 @@ any gender, late 40’s - 60’s, people of color. G is a Religious Studies Prof
 Actors' Equity New York Audition Center\n
 165 W 46th St\n
 16th Fl\n
-New York, NY 10036")
+New York, NY 10036", equity: true)
 #
 Audition.create(show_id: 3, show_name: "Lobby Hero", audition_date: "Fri, 09 Nov 2018", audition_information: "Please bring 2 songs, and 2 monologues", cast: false, begin_audition: "2018-11-09T12:30:00Z", end_audition: "2018-11-09T13:30:00Z", time_slots: 15, state: "New York City, New York", call_type: "EPA", contract: "LOA-NYC $582/week", personnel: "
 Written by Christopher Chen\n
@@ -224,7 +224,7 @@ Quisque commodo metus vel dui consectetur ornare. Vestibulum at odio eu urna sol
 Actors' Equity New York Audition Center\n
 165 W 46th St\n
 16th Fl\n
-New York, NY 10036")
+New York, NY 10036", equity: false)
 
 # Audition.create(show_id: 4, show_name: "Mary Page Marlowe", audition_information: "Please bring 2 songs, and 2 monologues", location: "Ripley-Grier Studios (520), 520 8th Ave, 17th Floor", cast: false, begin_audition: "Sun, 8 Jul 2018 08:00:00 -0000", end_audition: "Sun, 8 Jul 2018 12:00:00 -0000", time_slots: 30, state: "New York City, New York")
 #

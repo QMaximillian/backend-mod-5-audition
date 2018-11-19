@@ -79,6 +79,7 @@ ActiveRecord::Schema.define(version: 2018_10_18_012612) do
     t.string "other"
     t.string "seeking"
     t.string "breakdown"
+    t.boolean "equity"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

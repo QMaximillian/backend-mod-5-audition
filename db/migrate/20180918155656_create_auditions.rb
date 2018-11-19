@@ -19,6 +19,7 @@ class CreateAuditions < ActiveRecord::Migration[5.2]
           t.string :seeking
           t.string :breakdown
           t.string :location
+          t.boolean :equity
       t.timestamps
     end
   end
