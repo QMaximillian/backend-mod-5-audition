@@ -63,6 +63,6 @@ class Api::V1::ActorsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def actor_params
-      params.require(:actor).permit(:first_name, :last_name, :password, :email, :birthday, :phone_number, :equity, :gender, :city, :height, :ethnicity, :vocal_range)
+      params.require(:actor).permit(:first_name, :last_name, :password, :email, :birthday, :phone_number, :equity, :gender, :city, :feet, :inches, :ethnicity, :vocal_range)
     end
 end

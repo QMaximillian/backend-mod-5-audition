@@ -10,7 +10,8 @@ class CreateActors < ActiveRecord::Migration[5.2]
       t.boolean :equity
       t.string :gender
       t.string :city
-      t.string :height
+      t.string :feet
+      t.string :inches
       t.string :ethnicity
       t.string :vocal_range
       t.timestamps

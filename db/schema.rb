@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_18_012612) do
+ActiveRecord::Schema.define(version: 2018_11_21_032334) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -46,7 +46,8 @@ ActiveRecord::Schema.define(version: 2018_10_18_012612) do
     t.boolean "equity"
     t.string "gender"
     t.string "city"
-    t.string "height"
+    t.string "feet"
+    t.string "inches"
     t.string "ethnicity"
     t.string "vocal_range"
     t.datetime "created_at", null: false
@@ -80,6 +81,11 @@ ActiveRecord::Schema.define(version: 2018_10_18_012612) do
     t.string "seeking"
     t.string "breakdown"
     t.boolean "equity"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "locations", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
