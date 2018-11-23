@@ -12,6 +12,10 @@ class Api::V1::AuthController < ApplicationController
     end
   end
 
+  def login
+    byebug
+  end
+
 
 
   private

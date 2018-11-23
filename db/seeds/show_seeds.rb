@@ -1,4 +1,8 @@
-#// SHOWS
+# TEMPLATE
+
+# Show.create(season_id: , show_name: "", show_description: "", location: "NYC")
+
+# TEMPLATE
 
 Show.create(season_id: 1, show_name: "Torch Song", show_description: "Torch Song follows Arnold Beckoff's odyssey to find happiness in New York. All he wants is a husband, a child and a pair of bunny slippers that fit, but a visit from his overbearing mother reminds him that he needs one thing more: respect.", location: "NYC")
 #
@@ -42,3 +46,14 @@ Show.create(season_id: 3, show_name: "Do You Feel Anger", show_description: "Sof
 # Show.create(season_id: 2, show_name: "A Raisin in the Sun", show_description: "Walter and Ruth Younger, their son Travis, along with Walter's mother Lena (Mama) and Walter's sister Beneatha, live in poverty in a dilapidated one-bedroom apartment on Chicago's south side. Walter is barely making a living as a limousine driver. Though Ruth is content with their lot, Walter is not and desperately wishes to become wealthy. His plan is to invest in a liquor store in partnership with Willy and Bobo, street-smart acquaintances of Walter's.", location: "NYC", role: "Travis")
 
 # Show.create(season_id: 2, show_name: "Follies", show_description: "The story concerns a reunion in a crumbling Broadway theatre, scheduled for demolition, of the past performers of the \"Weismann's Follies\", a musical revue (based on the Ziegfeld Follies), that played in that theatre between the World Wars", location: "NYC", role: "Chorus")
+
+Show.create(season_id: 5, show_name: "My Fair Lady", show_description: "The most beloved musical of all time, Lerner & Loewe’s MY FAIR LADY returns to Broadway in a lavish new production from Lincoln Center Theater, the theater that brought you the Tony-winning revivals of South Pacific and The King and I.", location: "NYC")
+
+Show.create(season_id: 5, show_name: "To Kill A Mockingbird", show_description: "The most beloved musical of all time, Lerner & Loewe’s MY FAIR LADY returns to Broadway in a lavish new production from Lincoln Center Theater, the theater that brought you the Tony-winning revivals of South Pacific and The King and I.", location: "NYC")
+
+
+Show.create(season_id: 5, show_name: "The Hard Problem", show_description: "In Tom Stoppard’s THE HARD PROBLEM, Hilary (Adelaide Clemens) is a young psychology researcher at the Krohl Institute for Brain Science where psychology and biology meet.  If there is nothing but matter, what is consciousness?  This is “the hard problem” facing science, and for Hilary  the possibility of genuine altruism, without a hidden Darwinian self-interest, depends on the answer.  Meanwhile she is nursing a private sorrow.  She needs a miracle and is prepared to pray for one.", location: "NYC")
+
+Show.create(season_id: 5, show_name: "Throw Me On The Burnpile and Light Me Up", show_description: "Screenwriter, playwright, and novelist Lucy Alibar (Beasts of the Southern Wild) shares extraordinary coming-of-age stories in THROW ME ON THE BURNPILE AND LIGHT ME UP, set in the sometimes dangerous and often magical Florida Panhandle.", location: "NYC")
+
+Show.create(season_id: 5, show_name: "Mary's Seacole", show_description: "In MARYS SEACOLE, Mary (Quincy Tyler Bernstine) is an ambitious Jamaican woman whose adventures take her across oceans and eras, from a battlefield of the Crimean War to a contemporary nursing home, and many times and places in between.  This new play by Jackie Sibbles Drury is an exploration of what it means to be a woman who is paid to care.", location: "NYC")

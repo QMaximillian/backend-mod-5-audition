@@ -107,3 +107,25 @@ New York, NY 10036", equity: false)
 # Audition.create(show_id: 10, show_name: "A Raisin in the Sun", audition_information: "Please bring 2 songs, and 2 monologues", location: "Pearl Studios (520), 500 8th Ave, 3rd Floor", cast: false, begin_audition: "Thu, 4 Oct 2018 11:00:00 +0000", end_audition: "Thu, 4 Oct 2018 15:00:00 +0000", time_slots: 15, state: "New York City, New York")
 
 # Audition.create(show_id: 11, show_name: "Follies", audition_time: "Fri, 6 Jul 2018 02:00:00 -0000", audition_information: "Please bring 2 songs, and 2 monologues", location: "Pearl Studios (520), 500 8th Ave, 3rd Floor", cast: true)
+
+# Audition.create(show_id: 13, show_name: "My Fair Lady", audition_date: "Fri, 07 Dec 2018", audition_information: "Please bring 2 songs, and 2 monologues", location: "Ripley-Grier Studios (520), 520 8th Ave, 17th Floor", cast: false, begin_audition: "Sat, 7 Jul 2018 10:00:00 -000", end_audition: "Sat, 7 Jul 2018 15:00:00 -000", time_slots: 15, state: "New York City, New York")
+
+Audition.create(show_id: 3, show_name: "My Fair Lady", audition_date: "Fri, 07 Dec 2018", audition_information: "Please bring 2 songs, and 2 monologues", cast: false, begin_audition: "2018-12-07T9:00:00Z", end_audition: "2018-11-09T17:00:00Z", time_slots: 10, state: "New York City, New York", call_type: "EPA", contract: "$1974 current minimum. Equity Production (League) Contract", personnel: "
+Written by Ted Sperling/Alan Jay Lerner\n
+Lyrics by Ted Sperling/Alan Jay Lerner\n
+Music by Frederick Loewe\n
+Directed by Bartlett Sher\n", show_dates: "First Rehearsal: Feb 01, 2019\n
+Tech: April 16 - 21, 2019\n
+First Preview: March 22, 2019\n
+Opens: May 4, 2019\n
+Closing: April 19, 2019\n", other: "EPA Procedures are in effect for this audition.\n
+
+An Equity Monitor will be provided.\n
+
+Equity’s contracts prohibit discrimination. Equity is committed to diversity and encourages all its employers to engage in a policy of equal employment opportunity designed to promote a positive model of inclusion. As such, Equity encourages performers of all ethnicities, gender identities, and ages, as well as performers with disabilities, to attend every audition.\n
+
+Always bring your Equity Membership card to auditions.", seeking: "Ensemble Dancers: Males & Females, 20-49", breakdown: "Females and males, 20s–40s, any ethnicity. Strong technical dancers with strong legit musical theater voices; for the males, tumbling/acro a plus. Possible specialties and principal understudy assignments.", location: "
+Actors' Equity New York Audition Center\n
+165 W 46th St\n
+16th Fl\n
+New York, NY 10036", equity: true)
