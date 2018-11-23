@@ -13,7 +13,15 @@ class Api::V1::AuthController < ApplicationController
   end
 
   def login
-    byebug
+    @actor = Actor.find_by(email: auth_params['email'])
+
+    if @actor && @actor.authenticate(auth_params['password'])
+
+      # token = encode_token({ actor_id: @actor.id })
+      render json: { actor: ActorSerializer.new(@actor).to_json, jwt: @token }, status: :created
+    else
+      render json: {message: 'Invalid Username or Password'}, status: :unauthorized
+    end
   end
 
 

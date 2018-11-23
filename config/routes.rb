@@ -12,7 +12,6 @@ Rails.application.routes.draw do
       resources :theaters
       resources :seasons
       # resources :resources
-
       post '/login', to: 'auth#login'
     end
   end
