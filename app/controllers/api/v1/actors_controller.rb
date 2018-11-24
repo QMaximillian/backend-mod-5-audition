@@ -28,9 +28,8 @@ class Api::V1::ActorsController < ApplicationController
 
     if @actor.valid?
       @token = encode_token({ actor_id: @actor.id })
-      byebug
       render json: { actor: ActorSerializer.new(@actor).to_json, jwt: @token } , status: :ok, status: :created
-      byebug
+      
     else
      render json: { error: 'failed to create user' }, status: :not_acceptable
    end
