@@ -13,6 +13,7 @@ Rails.application.routes.draw do
       resources :seasons
       # resources :resources
       post '/login', to: 'auth#login'
+      get '/reauth', to: 'auth#reauth'
     end
   end
 
