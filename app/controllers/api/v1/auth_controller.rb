@@ -1,42 +1,24 @@
 class Api::V1::AuthController < ApplicationController
-# skip_before_action :authorized, only: %i[create]
+skip_before_action :authorized, only: [:login]
 
-  # def create
-  #   @actor = Actor.find_by(email: auth_params['email'])
-  #
-  #   if @actor && @actor.authenticate(auth_params['password'])
-  #     token = encode_token({ actor_id: @actor.id })
-  #     render json: { actor: ActorSerializer.new(@actor).to_json, jwt: @token }, status: :created
-  #   else
-  #     render json: {message: "Invalid Username or Password"}, status: :unauthorized
-  #   end
-  # end
-
-  def reauth
-
-    token = request.headers['Authorization']
-    decoded_token = JWT.decode(token, 'sassafras')
-    actor_id = decoded_token[0]['actor_id']
-    @actor = Actor.find(actor_id)
-
-    if @actor
-      render json: {actor: @actor.id}, status: :accepted
-    else
-      render json: {message: 'Invalid Credentials'}, status: :unauthorized
-    end
-  end
 
   def login
     @actor = Actor.find_by(email: auth_params['email'])
 
     if @actor && @actor.authenticate(auth_params['password'])
 
-      token = JWT.encode({ actor_id: @actor.id }, 'sassafras')
-      render json: { actor: @actor.id, jwt: token }, status: :created
+      token = encode_token({ actor: @actor.id })
+      render json: { actor_id: @actor.id, jwt: token }, status: :created
     else
       render json: {message: 'Invalid Username or Password'}, status: :unauthorized
     end
   end
+
+  def reauth
+    render json: { actor_id: @actor.id }, status: :accepted
+  end
+
+
 
 
 

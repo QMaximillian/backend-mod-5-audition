@@ -1,10 +1,10 @@
 class Api::V1::ActorsController < ApplicationController
-  # skip_before_action :authorized, only: [:create]
-  # before_action :set_actor, only: [:show, :update, :destroy]
+  skip_before_action :authorized, only: [:create]
+  before_action :set_actor, only: [:show, :update, :destroy]
 
-  def profile
-    render json: ActorSerializer.new(current_user).to_json, status: :accepted
-  end
+  # def profile
+  #   render json: ActorSerializer.new(current_user).to_json, status: :accepted
+  # end
   # GET /actors
   def index
     @actors = Actor.all
@@ -28,8 +28,8 @@ class Api::V1::ActorsController < ApplicationController
 
     if @actor.valid?
       @token = encode_token({ actor_id: @actor.id })
-      render json: { actor: ActorSerializer.new(@actor).to_json, jwt: @token } , status: :ok, status: :created
-      
+      render json: { actor: ActorSerializer.new(@actor).to_json, jwt: @token }, status: :created
+
     else
      render json: { error: 'failed to create user' }, status: :not_acceptable
    end

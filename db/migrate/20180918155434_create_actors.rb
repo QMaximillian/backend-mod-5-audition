@@ -14,6 +14,7 @@ class CreateActors < ActiveRecord::Migration[5.2]
       t.string :inches
       t.string :ethnicity
       t.string :vocal_range
+      t.string :token
       t.timestamps
     end
   end

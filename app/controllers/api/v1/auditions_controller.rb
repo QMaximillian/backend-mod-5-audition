@@ -1,5 +1,6 @@
 class Api::V1::AuditionsController < ApplicationController
-  # before_action :set_audition, only: [:show, :update, :destroy]
+  skip_before_action :authorized
+  before_action :set_audition, only: [:show, :update, :destroy]
 
   # GET /auditions
   def index

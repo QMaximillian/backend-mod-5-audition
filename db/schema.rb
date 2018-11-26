@@ -50,6 +50,7 @@ ActiveRecord::Schema.define(version: 2018_11_21_032334) do
     t.string "inches"
     t.string "ethnicity"
     t.string "vocal_range"
+    t.string "token"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
