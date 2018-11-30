@@ -10,7 +10,7 @@ skip_before_action :authorized, only: [:login]
       token = encode_token({ actor: @actor.id })
       render json: { actor_id: @actor.id, jwt: token }, status: :created
     else
-      render json: {message: 'Invalid Username or Password'}, status: :unauthorized
+      render json: {error: { message: 'Invalid Username or Password'}}, status: :unauthorized
     end
   end
 

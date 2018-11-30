@@ -2,7 +2,7 @@ class ApplicationController < ActionController::API
   before_action :authorized
 
   def encode_token(payload)
-    JWT.encode(payload, 'sassafras')
+    JWT.encode(payload, Rails.application.credentials.authorization[:word])
   end
 
   def auth_headers
@@ -13,7 +13,7 @@ class ApplicationController < ActionController::API
     if auth_headers
       token = auth_headers
       begin
-        JWT.decode(token, 'sassafras')
+        JWT.decode(token, Rails.application.credentials.authorization[:word])
       rescue JWT::DecodeError
         nil
       end
