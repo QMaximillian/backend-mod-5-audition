@@ -20,7 +20,7 @@ class Api::V1::TryoutsController < ApplicationController
     @tryout = Tryout.new(tryout_params)
 
     if @tryout.save
-      render json: TryoutSerializer.new(@tryout).to_json, status: :ok, status: :created
+      render json: TryoutSerializer.new(@tryout).to_json, status: :ok
     else
       render json: @tryout.errors, status: :unprocessable_entity
     end
